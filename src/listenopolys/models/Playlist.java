@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -18,25 +19,20 @@ import java.util.TreeSet;
 public class Playlist {
     private String title;
     private Time duration;
-    private Map<Integer,Track> playlist;
+    private Set<Track> playlist;
     
     public Playlist(String title){
         this.title=title;
         this.duration=new Time(0,0,0);
-        playlist=new TreeMap();
+        playlist=new TreeSet<>();
     }
     
     
     public void addTrack(Track t){
-        if(playlist.isEmpty()){
-            playlist.put(1, t);
-        }
-        else{
-            playlist.put((playlist.lastKey()+1, t);
-        }
+            playlist.add(t);
     }
     
-    public void removeTrack(int id){
-        playlist.remove(id);
+    public void removeTrack(Track t){
+        playlist.remove(t);
     }
 }
