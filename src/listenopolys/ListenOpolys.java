@@ -5,12 +5,22 @@
  */
 package listenopolys;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
+import listenopolys.models.Time;
+import listenopolys.models.Track;
+import listenopolys.models.TrackReader;
 
 /**
  *
@@ -45,7 +55,15 @@ public class ListenOpolys extends Application {
         RowConstraints row2 = new RowConstraints();
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
-
+        TrackReader reader = new TrackReader(new Track("titre", "/home/etud/enmora/Téléchargements/13632.wav" , "chopin", 1992, new Time(0, 0, 0)));
+        Button playButton = new Button("play");
+        playButton.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent e){
+                reader.play();
+            }
+        });
+        
+        player.add(playButton, 0, 0);
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
