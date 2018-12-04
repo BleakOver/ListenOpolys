@@ -64,4 +64,12 @@ public class TrackReader {
         status="play";
     }
     
+    public void stop(){
+        if(status=="pause" && currentFrame==0)
+            return;
+        clip.stop();
+        currentFrame=0;
+        status="pause";
+    }
+    
 }

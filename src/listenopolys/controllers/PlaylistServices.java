@@ -6,7 +6,10 @@
 package listenopolys.controllers;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import listenopolys.models.Playlist;
+import listenopolys.models.Track;
 
 /**
  *
@@ -19,11 +22,24 @@ public class PlaylistServices {
        playlistList=new ArrayList<>();
     }
     
+    
     public void addPlaylist(Playlist p){
-        playlistList.add(p);
+        if(!playlistList.contains(p)){
+            playlistList.add(p);
+        }
+        
     }
     
-    public void removePlaylist(Playlist p){
-        playlistList.remove(p);
+    public void removePlaylist(String playlistTitle){
+        for (Playlist p : playlistList) {
+            if(p.getTitle()==playlistTitle){
+                playlistList.remove(p);
+                return;
+            }
+        }
+    }
+    
+    public Set<Track> getTracksFromPlaylist(String playlistTitle){
+        for (Playlist p:)
     }
 }

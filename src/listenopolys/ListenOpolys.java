@@ -40,9 +40,9 @@ public class ListenOpolys extends Application {
         structure.add(media, 1, 0);
         structure.add(player, 0, 1, 2, 1);
         
-        menu.setStyle("-fx-background-color: #FF00FF;");
-        media.setStyle("-fx-background-color: #FF0000;");
-        player.setStyle("-fx-background-color: #0000FF;");
+        menu.setStyle("-fx-background-color: ##7EB2A0;");
+        media.setStyle("-fx-background-color: #2F3136;");
+        player.setStyle("-fx-background-color: #6EBDC2;");
         
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setPercentWidth(35);
@@ -63,7 +63,23 @@ public class ListenOpolys extends Application {
             }
         });
         
-        player.add(playButton, 0, 0);
+        Button pauseButton = new Button("pause");
+        playButton.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent e){
+                reader.pause();
+            }
+        });
+        
+        Button stopButton = new Button("stop");
+        playButton.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent e){
+                reader.stop();
+            }
+        });
+        
+        player.add(playButton, 0, 1);
+        player.add(pauseButton, 1,0);
+        player.add(stopButton, 0, 0);
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
