@@ -53,5 +53,19 @@ public class Track {
        return this.filePath;
    }
    
+   public boolean equals(Object o){
+        if(o==null){
+            return false;
+        }
+        if(this==o){
+            return true;
+        }
+        if(this.getClass()!=o.getClass()){
+            return false;
+        }
+        Track t = (Track) o;
+        return filePath.equals(t.getFilePath());
+                
+    }
   
 }

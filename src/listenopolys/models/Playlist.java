@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package listenopolys.models;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -14,24 +16,40 @@ import java.util.TreeSet;
 public class Playlist {
     private String title;
     private Time duration;
-    private Set<Track> playlist;
+    private List<Track> playlist;
     
     public Playlist(String title){
         this.title=title;
         this.duration=new Time(0,0,0);
-        playlist=new TreeSet<>();
+        playlist=new ArrayList<>();
     }
    
     public void addTrack(Track t){
             playlist.add(t);
+            duration.addTime(t.getDuration());
     }
     
-    public void removeTrack(Track t){
-        playlist.remove(t);
+    public void removeTrack(String filePath){
+        for (Track t : playlist) {
+            if(t.getFilePath().equals(filePath)){
+                playlist.remove(t);
+                return;
+            }
+        }
     }
     
-    public Set<Track> getTracks(){
+    public List<Track> getTracks(){
         return playlist;
+    }
+    
+    
+    public Track getTrack(String filePath){
+        for (Track t : playlist) {
+            if(t.getFilePath().equals(filePath)){
+                return t;
+            }
+        }
+        return null;
     }
     
     public String getTitle(){
@@ -49,9 +67,7 @@ public class Playlist {
             return false;
         }
         Playlist p = (Playlist) o;
-        if(title != p.getTitle())
-            return false;
-        return title.equals(p.title);
+        return title.equals(p.getTitle());
                 
     }
 }

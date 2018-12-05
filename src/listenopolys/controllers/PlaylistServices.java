@@ -32,14 +32,23 @@ public class PlaylistServices {
     
     public void removePlaylist(String playlistTitle){
         for (Playlist p : playlistList) {
-            if(p.getTitle()==playlistTitle){
+            if(p.getTitle().equals(playlistTitle)){
                 playlistList.remove(p);
                 return;
             }
         }
     }
     
-    public Set<Track> getTracksFromPlaylist(String playlistTitle){
-        for (Playlist p:)
+    public List<Track> getTracksFromPlaylist(String playlistTitle){
+        for (Playlist p : playlistList) {
+            if(p.getTitle().equals(playlistTitle)){
+                return p.getTracks();
+            }
+        }
+        return null;
+    }
+    
+    public List<Playlist> getPlaylistList(){
+        return playlistList;
     }
 }

@@ -54,6 +54,7 @@ public class TrackReader {
         currentFrame=clip.getMicrosecondPosition();
         clip.stop();
         status="pause";
+        System.out.println("pause");
     }
            
     public void play(){
@@ -62,6 +63,7 @@ public class TrackReader {
         clip.setMicrosecondPosition(currentFrame);
         clip.start();
         status="play";
+        System.out.println("play");
     }
     
     public void stop(){
@@ -70,6 +72,11 @@ public class TrackReader {
         clip.stop();
         currentFrame=0;
         status="pause";
+        System.out.println("stop");
+    }
+    
+    public String getStatus(){
+        return status;
     }
     
 }
