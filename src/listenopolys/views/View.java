@@ -5,15 +5,18 @@
  */
 package listenopolys.views;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 import listenopolys.controllers.PlaylistServices;
+import listenopolys.models.Playlist;
 import listenopolys.models.Time;
 import listenopolys.models.Track;
 import listenopolys.models.TrackReader;
@@ -26,10 +29,16 @@ public class View {
     
     PlaylistServices playlistService;
     TrackReader reader;
+    ListView<Playlist> listPlaylists;    
+    ListView<Track> listTracks;
+
     
     public View(Stage primaryStage){
         
         playlistService= new PlaylistServices();
+        playlistService.addPlaylist(new Playlist("test"));
+        listPlaylists = new ListView<Playlist>();
+        
         
         GridPane structure = new GridPane();
         Scene scene = new Scene(structure, 800, 600);
@@ -38,13 +47,13 @@ public class View {
         GridPane media = new GridPane();
         GridPane player = new GridPane();
         
-        structure.add(menu, 0, 0);
+        structure.add(menu, 0, 0, 1, 2);
         structure.add(media, 1, 0);
-        structure.add(player, 0, 1, 2, 1);
+        structure.add(player, 1, 1);
         
-        menu.setStyle("-fx-background-color: #7EB2A0;");
-        media.setStyle("-fx-background-color: #2F3136;");
-        player.setStyle("-fx-background-color: #6EBDC2;");
+        menu.setStyle("-fx-background-color: #0b5351;");
+        media.setStyle("-fx-background-color: #01060a;");
+        player.setStyle("-fx-background-color: #f4f1f2;");
         
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setPercentWidth(35);
@@ -86,10 +95,12 @@ public class View {
         });
         
         
-        
+        listPlaylists.setItems(FXCollections.observableArrayList(playlistService.getPlaylistList()));
         
         player.add(playPauseButton, 0, 1);
         player.add(stopButton, 0, 0);
+        
+        menu.add(listPlaylists, 0, 0);
         
         primaryStage.setTitle("ListenOpolys");
         primaryStage.setScene(scene);
