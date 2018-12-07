@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import listenopolys.models.Playlist;
 import listenopolys.models.Track;
@@ -17,10 +18,10 @@ import listenopolys.models.Track;
  * @author husoeur
  */
 public class PlaylistServices {
-    private List<Playlist> playlistList;
+    private ObservableList<Playlist> playlistList;
     
     public PlaylistServices(){
-       playlistList=new ArrayList<>();
+       playlistList = FXCollections.observableArrayList();
     }
     
     
@@ -48,9 +49,18 @@ public class PlaylistServices {
         }
         return null;
     }
+    
+    public Playlist getPlaylist(String title){
+        for (Playlist p : playlistList) {
+            if(p.getTitle().equals(title)){
+                return p;
+            }
+        }
+        return null;
+    }
    
     
-    public List<Playlist> getPlaylistList(){
+    public ObservableList<Playlist> getPlaylistList(){
         return playlistList;
     }
 }

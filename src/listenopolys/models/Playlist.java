@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -16,12 +18,12 @@ import java.util.TreeSet;
 public class Playlist {
     private String title;
     private Time duration;
-    private List<Track> playlist;
+    private ObservableList<Track> playlist;
     
     public Playlist(String title){
         this.title=title;
         this.duration=new Time(0,0,0);
-        playlist=new ArrayList<>();
+        playlist=FXCollections.observableArrayList();
     }
    
     public void addTrack(Track t){
@@ -38,7 +40,7 @@ public class Playlist {
         }
     }
     
-    public List<Track> getTracks(){
+    public ObservableList<Track> getTracks(){
         return playlist;
     }
     

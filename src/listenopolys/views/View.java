@@ -39,8 +39,11 @@ public class View {
         
         playlistService= new PlaylistServices();
         playlistService.addPlaylist(new Playlist("Hello world!"));
+        playlistService.getPlaylist("Hello world!").addTrack(new Track("test", "", "rock", 1988, new Time(0,0,0)));
+        
+        
         listPlaylists = new ListView<Playlist>();
-        listPlaylists.setCellFactory(lv -> new ListCell<Playlist>(){
+        listPlaylists.setCellFactory(playLv -> new ListCell<Playlist>(){
             @Override
             public void updateItem(Playlist item, boolean empty){
                 super.updateItem(item, empty);
@@ -55,6 +58,21 @@ public class View {
         }
         );
         
+        listTracks = new ListView<Track>();
+        listTracks.setCellFactory(tracLv -> new ListCell<Track>(){
+            @Override
+            public void updateItem(Track item, boolean empty){
+                super.updateItem(item, empty);
+                if(empty){
+                    setText(null);
+                }
+                else {
+                    String text = item.getTitle();
+                    setText(text);
+                }
+            }
+        }
+        );
         
         GridPane structure = new GridPane();
         Scene scene = new Scene(structure, 800, 600);
@@ -89,20 +107,21 @@ public class View {
         */
         
         Button playPauseButton = new Button("play");
-        /*playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
+        playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                if(reader.getStatus().equals("pause")){
+                /*if(reader.getStatus().equals("pause")){
                     reader.play();
                     playPauseButton.setText("pause");
                 }
                 else if(reader.getStatus().equals("play")){
                     reader.pause();
                     playPauseButton.setText("play");
-                }
+                }*/
+                playlistService.addPlaylist(new Playlist("test"));
             }
         });
-        */
+        
         Button stopButton = new Button("stop");
         /*
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -113,21 +132,27 @@ public class View {
         });
         
         */
-        listPlaylists.setItems(FXCollections.observableArrayList(playlistService.getPlaylistList()));
         
+        listPlaylists.setItems(playlistService.getPlaylistList());
+        
+       
+        
+                
         player.add(playPauseButton, 0, 1);
         player.add(stopButton, 0, 0);
         
         listPlaylists.prefWidthProperty().bind(menu.widthProperty());
-        
+        listTracks.prefWidthProperty().bind(menu.widthProperty());
         
         RowConstraints menu1 = new RowConstraints();
-        menu1.setPercentHeight(50);
-        menu.getRowConstraints().addAll(menu1, menu1);
+        menu1.setPercentHeight(40); 
+        RowConstraints menu2 = new RowConstraints();
+        menu2.setPercentHeight(10);
+        menu.getRowConstraints().addAll(menu1, menu2, menu1, menu2);
         
         
         menu.add(listPlaylists, 0, 0);
-        
+        menu.add(listTracks, 0, 2);
         primaryStage.setTitle("ListenOpolys");
         primaryStage.setScene(scene);
         primaryStage.show();
