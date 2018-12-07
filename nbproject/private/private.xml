@@ -5,6 +5,7 @@
         <group>
             <file>file:/home/etud/enmora/ProjetJava/ListenOpolys/src/listenopolys/views/View.java</file>
             <file>file:/home/etud/enmora/ProjetJava/ListenOpolys/src/listenopolys/models/Playlist.java</file>
+            <file>file:/home/etud/enmora/ProjetJava/ListenOpolys/src/listenopolys/ListenOpolys.java</file>
             <file>file:/home/etud/enmora/ProjetJava/ListenOpolys/src/listenopolys/controllers/PlaylistServices.java</file>
             <file>file:/home/etud/enmora/ProjetJava/ListenOpolys/src/listenopolys/models/TrackReader.java</file>
         </group>

@@ -10,11 +10,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import listenopolys.controllers.PlaylistServices;
 import listenopolys.models.Playlist;
 import listenopolys.models.Time;
@@ -36,8 +38,22 @@ public class View {
     public View(Stage primaryStage){
         
         playlistService= new PlaylistServices();
-        playlistService.addPlaylist(new Playlist("test"));
+        playlistService.addPlaylist(new Playlist("Hello world!"));
         listPlaylists = new ListView<Playlist>();
+        listPlaylists.setCellFactory(lv -> new ListCell<Playlist>(){
+            @Override
+            public void updateItem(Playlist item, boolean empty){
+                super.updateItem(item, empty);
+                if(empty){
+                    setText(null);
+                }
+                else {
+                    String text = item.getTitle();
+                    setText(text);
+                }
+            }
+        }
+        );
         
         
         GridPane structure = new GridPane();
@@ -67,12 +83,13 @@ public class View {
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
         
+        /*
         Track t = new Track("chopin", "/home/etud/enmora/Téléchargements/13632.wav", "classique", 1665, new Time(9, 17, 2));
         reader = new TrackReader(t);
-        
+        */
         
         Button playPauseButton = new Button("play");
-        playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
+        /*playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
                 if(reader.getStatus().equals("pause")){
@@ -85,8 +102,9 @@ public class View {
                 }
             }
         });
-        
+        */
         Button stopButton = new Button("stop");
+        /*
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
@@ -94,11 +112,19 @@ public class View {
             }
         });
         
-        
+        */
         listPlaylists.setItems(FXCollections.observableArrayList(playlistService.getPlaylistList()));
         
         player.add(playPauseButton, 0, 1);
         player.add(stopButton, 0, 0);
+        
+        listPlaylists.prefWidthProperty().bind(menu.widthProperty());
+        
+        
+        RowConstraints menu1 = new RowConstraints();
+        menu1.setPercentHeight(50);
+        menu.getRowConstraints().addAll(menu1, menu1);
+        
         
         menu.add(listPlaylists, 0, 0);
         
