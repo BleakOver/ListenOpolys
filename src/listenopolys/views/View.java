@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -33,7 +34,7 @@ public class View {
     TrackReader reader;
     ListView<Playlist> listPlaylists;    
     ListView<Track> listTracks;
-
+   
     
     public View(Stage primaryStage){
         
@@ -83,12 +84,33 @@ public class View {
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
         
+        Button addPlaylistButton= new Button("Add New Playlist");
+        addPlaylistButton.setOnAction(new EventHandler<ActionEvent>() {
+        	@Override
+        	public void handle(ActionEvent event) {
+        		
+        		GridPane structAddPlaylist = new GridPane();
+        		
+        		Scene addPlaylistScene = new Scene(structAddPlaylist,300,200);
+        		Stage addPlaylist = new Stage();
+        		addPlaylist.setTitle("Add Playlist Window");
+        		
+        		addPlaylist.setX(primaryStage.getX() + 200);
+        		addPlaylist.setY(primaryStage.getY() + 100);
+        		
+        		
+        		addPlaylist.setScene(addPlaylistScene);
+        		addPlaylist.show();
+        	}
+        });
+        
         /*
         Track t = new Track("chopin", "/home/etud/enmora/Téléchargements/13632.wav", "classique", 1665, new Time(9, 17, 2));
         reader = new TrackReader(t);
         */
         
         Button playPauseButton = new Button("play");
+       
         /*playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
@@ -117,6 +139,7 @@ public class View {
         
         player.add(playPauseButton, 0, 1);
         player.add(stopButton, 0, 0);
+        player.add(addPlaylistButton, 0, 2);
         
         listPlaylists.prefWidthProperty().bind(menu.widthProperty());
         
