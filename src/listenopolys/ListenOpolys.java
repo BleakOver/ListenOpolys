@@ -5,22 +5,8 @@
  */
 package listenopolys;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
-import listenopolys.models.Time;
-import listenopolys.models.Track;
-import listenopolys.models.TrackReader;
 import listenopolys.views.View;
 
 /**

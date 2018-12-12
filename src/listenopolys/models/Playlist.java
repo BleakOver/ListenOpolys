@@ -4,10 +4,6 @@
  * and open the template in the editor.
  */
 package listenopolys.models;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

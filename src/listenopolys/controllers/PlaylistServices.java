@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package listenopolys.controllers;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import listenopolys.models.Playlist;

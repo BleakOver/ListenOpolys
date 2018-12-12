@@ -5,7 +5,6 @@
  */
 package listenopolys.views;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -17,7 +16,6 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import listenopolys.controllers.PlaylistServices;
 import listenopolys.models.Playlist;
 import listenopolys.models.Time;
@@ -110,37 +108,32 @@ public class View {
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
         
-        /*
-        Track t = new Track("chopin", "/home/etud/enmora/Téléchargements/13632.wav", "classique", 1665, new Time(9, 17, 2));
+        
+        Track t = new Track("chopin", "/home/etud/enmora/ProjetJava/ListenOpolys/hugoladobe.wav", "classique", 1665, new Time(9, 17, 2));
         reader = new TrackReader(t);
-        */
         
         Button playPauseButton = new Button("play");
         playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                /*if(reader.getStatus().equals("pause")){
+                if(reader.getStatus().equals("paused")){
                     reader.play();
                     playPauseButton.setText("pause");
                 }
-                else if(reader.getStatus().equals("play")){
+                else if(reader.getStatus().equals("playing")){
                     reader.pause();
                     playPauseButton.setText("play");
-                }*/
-                playlistService.addPlaylist(new Playlist("test"));
+                }
             }
         });
         
         Button stopButton = new Button("stop");
-        /*
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
                 reader.stop();
             }
         });
-        
-        */
         
         listPlaylists.setItems(playlistService.getPlaylistList());
         
