@@ -110,20 +110,21 @@ public class View {
         
         
         Track t = new Track("chopin", "/home/etud/enmora/ProjetJava/ListenOpolys/hugoladobe.wav", "classique", 1665, new Time(9, 17, 2));
-        reader = new TrackReader(t);
+        //reader = new TrackReader(t);
         
         Button playPauseButton = new Button("play");
         playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                if(reader.getStatus().equals("paused")){
+                /*if(reader.getStatus().equals("paused")){
                     reader.play();
                     playPauseButton.setText("pause");
                 }
                 else if(reader.getStatus().equals("playing")){
                     reader.pause();
                     playPauseButton.setText("play");
-                }
+                }*/
+                playlistService.addPlaylist(new Playlist("test"));
             }
         });
         
@@ -131,7 +132,7 @@ public class View {
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                reader.stop();
+                //reader.stop();
             }
         });
         
