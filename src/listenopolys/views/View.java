@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -39,6 +40,7 @@ public class View {
         
         playlistService= new PlaylistServices();
         playlistService.addPlaylist(new Playlist("Hello world!"));
+        playlistService.addPlaylist(new Playlist("Alright BOI"));
         playlistService.getPlaylist("Hello world!").addTrack(new Track("test", "", "rock", 1988, new Time(0,0,0)));
         
         
@@ -57,6 +59,13 @@ public class View {
             }
         }
         );
+        
+        listPlaylists.setOnMouseClicked(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event){
+                listTracks.setItems(listPlaylists.getSelectionModel().getSelectedItem().getTracks());
+            }
+        });
         
         listTracks = new ListView<Track>();
         listTracks.setCellFactory(tracLv -> new ListCell<Track>(){
@@ -135,7 +144,6 @@ public class View {
         
         listPlaylists.setItems(playlistService.getPlaylistList());
         
-       
         
                 
         player.add(playPauseButton, 0, 1);
