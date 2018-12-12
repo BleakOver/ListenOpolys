@@ -5,6 +5,7 @@
  */
 package listenopolys.views;
 
+
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -34,10 +35,12 @@ public class View {
     TrackReader reader;
     ListView<Playlist> listPlaylists;    
     ListView<Track> listTracks;
+   AddPlaylistView addView;
+    Stage primaryStage;
    
     
     public View(Stage primaryStage){
-        
+    	this.primaryStage=primaryStage;
         playlistService= new PlaylistServices();
         playlistService.addPlaylist(new Playlist("Hello world!"));
         listPlaylists = new ListView<Playlist>();
@@ -89,20 +92,12 @@ public class View {
         	@Override
         	public void handle(ActionEvent event) {
         		
-        		GridPane structAddPlaylist = new GridPane();
-        		
-        		Scene addPlaylistScene = new Scene(structAddPlaylist,300,200);
-        		Stage addPlaylist = new Stage();
-        		addPlaylist.setTitle("Add Playlist Window");
-        		
-        		addPlaylist.setX(primaryStage.getX() + 200);
-        		addPlaylist.setY(primaryStage.getY() + 100);
-        		
-        		
-        		addPlaylist.setScene(addPlaylistScene);
-        		addPlaylist.show();
+        		appelAddPlaylistView();
+
         	}
         });
+        
+        
         
         /*
         Track t = new Track("chopin", "/home/etud/enmora/Téléchargements/13632.wav", "classique", 1665, new Time(9, 17, 2));
@@ -155,5 +150,9 @@ public class View {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+    
+    public void appelAddPlaylistView() {
+   	 new AddPlaylistView(primaryStage,  this);
+   }
     
 }
