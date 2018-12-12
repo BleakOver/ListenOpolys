@@ -5,6 +5,8 @@
  */
 package listenopolys.views;
 
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -32,10 +34,12 @@ public class View {
     TrackReader reader;
     ListView<Playlist> listPlaylists;    
     ListView<Track> listTracks;
-
+   AddPlaylistView addView;
+    Stage primaryStage;
+   
     
     public View(Stage primaryStage){
-        
+    	this.primaryStage=primaryStage;
         playlistService= new PlaylistServices();
         playlistService.addPlaylist(new Playlist("Hello world!"));
         playlistService.addPlaylist(new Playlist("Alright BOI"));
@@ -107,10 +111,19 @@ public class View {
         RowConstraints row2 = new RowConstraints();
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
-        
-        
+                
         Track t = new Track("chopin", "/home/etud/enmora/ProjetJava/ListenOpolys/hugoladobe.wav", "classique", 1665, new Time(9, 17, 2));
         //reader = new TrackReader(t);
+        
+        Button addPlaylistButton= new Button("Add New Playlist");
+        addPlaylistButton.setOnAction(new EventHandler<ActionEvent>() {
+        	@Override
+        	public void handle(ActionEvent event) {
+        		
+        		appelAddPlaylistView();
+
+        	}
+        });
         
         Button playPauseButton = new Button("play");
         playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -142,6 +155,7 @@ public class View {
                 
         player.add(playPauseButton, 0, 1);
         player.add(stopButton, 0, 0);
+        player.add(addPlaylistButton, 0, 2);
         
         listPlaylists.prefWidthProperty().bind(menu.widthProperty());
         listTracks.prefWidthProperty().bind(menu.widthProperty());
@@ -159,5 +173,9 @@ public class View {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+    
+    public void appelAddPlaylistView() {
+   	 new AddPlaylistView(primaryStage,  this);
+   }
     
 }
