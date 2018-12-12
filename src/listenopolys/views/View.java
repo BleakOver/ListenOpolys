@@ -112,8 +112,8 @@ public class View {
         row2.setPercentHeight(20);
         structure.getRowConstraints().addAll(row1, row2);
                 
-        Track t = new Track("chopin", "/home/etud/enmora/ProjetJava/ListenOpolys/hugoladobe.wav", "classique", 1665, new Time(9, 17, 2));
-        //reader = new TrackReader(t);
+        Track t = new Track("chopin", "hugoladobe.wav", "classique", 1665, new Time(9, 17, 2));
+        reader = new TrackReader(t);
         
         Button addPlaylistButton= new Button("Add New Playlist");
         addPlaylistButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -129,15 +129,15 @@ public class View {
         playPauseButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                /*if(reader.getStatus().equals("paused")){
+            	System.out.println(reader.getStatus());
+                if(reader.getStatus().equals("PAUSED")||reader.getStatus().equals("READY")||reader.getStatus().equals("STOPPED")){
                     reader.play();
                     playPauseButton.setText("pause");
                 }
-                else if(reader.getStatus().equals("playing")){
+                else if(reader.getStatus().equals("PLAYING")){
                     reader.pause();
                     playPauseButton.setText("play");
-                }*/
-                playlistService.addPlaylist(new Playlist("test"));
+                }
             }
         });
         
@@ -145,7 +145,7 @@ public class View {
         stopButton.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                //reader.stop();
+                reader.stop();
             }
         });
         
