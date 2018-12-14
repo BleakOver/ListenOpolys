@@ -1,22 +1,7 @@
 package listenopolys.views;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
-import javafx.stage.Stage;
-import javafx.util.Callback;
-import listenopolys.controllers.PlaylistServices;
 import listenopolys.models.Playlist;
-import listenopolys.models.Time;
-import listenopolys.models.Track;
-import listenopolys.models.TrackReader;
 
 
 

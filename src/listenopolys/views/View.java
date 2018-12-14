@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
@@ -18,7 +19,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
-import listenopolys.controllers.PlaylistServices;
+import listenopolys.models.PlaylistServices;
 import listenopolys.models.Playlist;
 import listenopolys.models.Time;
 import listenopolys.models.Track;
@@ -34,7 +35,7 @@ public class View {
     TrackReader reader;
     ListView<Playlist> listPlaylists;    
     ListView<Track> listTracks;
-   AddPlaylistView addView;
+    AddPlaylistView addView;
     Stage primaryStage;
    
     
@@ -85,6 +86,16 @@ public class View {
         }
         );
         
+        Label titre = new Label();
+        
+        listTracks.setOnMouseClicked(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event){
+                reader = new TrackReader(listTracks.getSelectionModel().getSelectedItem());
+                titre.setText(listTracks.getSelectionModel().getSelectedItem().getTitle());
+            }
+        });
+        
         GridPane structure = new GridPane();
         Scene scene = new Scene(structure, 800, 600);
         
@@ -95,6 +106,9 @@ public class View {
         structure.add(menu, 0, 0, 1, 2);
         structure.add(media, 1, 0);
         structure.add(player, 1, 1);
+        
+        
+        media.add(titre, 0, 0);
         
         menu.setStyle("-fx-background-color: #0b5351;");
         media.setStyle("-fx-background-color: #01060a;");

@@ -19,9 +19,9 @@ public class TrackReader {
     private MediaPlayer player;
     
     public TrackReader(Track track){
-        File file = new File(track.getFilePath());
+        /*File file = new File(track.getFilePath());
         music = new Media(file.toURI().toString());
-        player = new MediaPlayer(music);
+        player = new MediaPlayer(music);*/
         
     }
     
