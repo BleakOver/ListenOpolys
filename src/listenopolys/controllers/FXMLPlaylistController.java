@@ -7,11 +7,22 @@
 package listenopolys.controllers;
 
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import listenopolys.models.Playlist;
+import listenopolys.models.PlaylistServices;
 
 /**
  *
@@ -19,9 +30,30 @@ import javafx.scene.control.Label;
  */
 public class FXMLPlaylistController implements Initializable {
 
+    private PlaylistServices pservice;
+    @FXML
+    public Button addButton;
+    @FXML
+    public TextField newPlaylistName;
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+    }
+
+    @FXML
+    public void handleCloseButtonAction(ActionEvent event) {
+        Stage stage = (Stage) addButton.getScene().getWindow();
+        if(newPlaylistName.getText() != null && !newPlaylistName.getText().isEmpty()){
+            Playlist p = new Playlist(newPlaylistName.getText());
+            pservice.addPlaylist(p);
+        }
+        else{
+            newPlaylistName.clear();
+        }
+        stage.close();
     }
 
 

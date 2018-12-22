@@ -5,10 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLPlaylistController">
+<AnchorPane fx:id="alertMessage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLPlaylistController">
    <children>
-      <Button layoutX="171.0" layoutY="163.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="ADD" />
-      <TextField layoutX="154.0" layoutY="81.0" />
+      <Button fx:id="addButton" layoutX="171.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="25.0" prefWidth="114.0" text="ADD" />
+      <TextField fx:id="newPlaylistName" layoutX="154.0" layoutY="81.0" />
       <Label layoutX="164.0" layoutY="51.0" prefHeight="17.0" prefWidth="134.0" text="New playlist name" />
+      <Label layoutX="170.0" layoutY="214.0" prefHeight="17.0" prefWidth="114.0" />
+       
    </children>
 </AnchorPane>

@@ -23,6 +23,13 @@ import javafx.scene.Node;
  */
 public class FXMLController implements Initializable {
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+
+    }
+
     @FXML
     private void handleButtonAction(ActionEvent event) throws Exception {
 
@@ -34,10 +41,6 @@ public class FXMLController implements Initializable {
         playlistAdd_stage.show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-    }
 
 
 
