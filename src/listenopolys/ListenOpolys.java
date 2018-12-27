@@ -10,15 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import listenopolys.views.View;
 
 /**
  *
  * @author husoeur
  */
 public class ListenOpolys extends Application {
-    
-    View view;
     
     @Override
     public void start(Stage primaryStage) throws Exception{

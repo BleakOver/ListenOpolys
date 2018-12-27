@@ -32,8 +32,12 @@ public class FXMLController implements Initializable, TrackReaderListener {
     @FXML
     private Button buttonPlayPause;
 
+    @FXML
+    private Button buttonRepeat;
+
     private PlaylistServices playlists;
     private TrackReader reader;
+    private boolean repeat;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -79,7 +83,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
 
     public void viewTracksClicked(){
         if(viewTracks.getSelectionModel().getSelectedItem() != null && viewPlaylists.getSelectionModel().getSelectedItem() != null) {
-            reader = new TrackReader(viewTracks.getSelectionModel().getSelectedItem());
+            reader = new TrackReader(viewTracks.getSelectionModel().getSelectedItem(), repeat);
             reader.addListener(this);
         }
     }
@@ -103,8 +107,18 @@ public class FXMLController implements Initializable, TrackReaderListener {
     }
 
     public void endOfMedia(){
-        reader.stop();
-        buttonPlayPause.setText("Play");
+        if(!repeat) {
+            buttonPlayPause.setText("Play");
+            reader.stop();
+        }
+    }
+
+    public void buttonRepeatClicked(){
+        repeat = !repeat;
+        buttonRepeat.setText((repeat) ? "Repeat: ON" : "Repeat: OFF");
+        if(reader!=null) {
+            reader.setRepeatTo(repeat);
+        }
     }
 
 }

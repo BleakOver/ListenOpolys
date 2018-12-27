@@ -22,7 +22,7 @@ public class TrackReader {
     private Media music;
     private MediaPlayer player;
     
-    public TrackReader(Track track){
+    public TrackReader(Track track, boolean repeat){
         listeners = new ArrayList<>();
         File file = new File(track.getFilePath());
         music = new Media(file.toURI().toString());
@@ -30,7 +30,7 @@ public class TrackReader {
         player.setOnEndOfMedia(() -> {
             notifyEndOfMedia();
         });
-        //player.setCycleCount(MediaPlayer.INDEFINITE);
+        player.setCycleCount((repeat) ? MediaPlayer.INDEFINITE : 1);
     }
 
     public void addListener(TrackReaderListener listener){
@@ -57,6 +57,10 @@ public class TrackReader {
     
     public void stop(){
         player.stop();
+    }
+
+    public void setRepeatTo(boolean repeat){
+        player.setCycleCount((repeat) ? MediaPlayer.INDEFINITE : 1);
     }
     
     public String getStatus(){

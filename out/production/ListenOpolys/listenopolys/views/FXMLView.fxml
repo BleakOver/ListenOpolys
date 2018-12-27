@@ -33,8 +33,10 @@
             <children>
                 <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" text="Play" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <Button fx:id="buttonStop" onAction="#buttonStopClicked" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button fx:id="buttonRepeat" mnemonicParsing="false" onAction="#buttonRepeatClicked" text="Repeat: OFF" GridPane.columnIndex="2" />
             </children>
          <columnConstraints>
+            <ColumnConstraints />
             <ColumnConstraints />
             <ColumnConstraints />
          </columnConstraints>
