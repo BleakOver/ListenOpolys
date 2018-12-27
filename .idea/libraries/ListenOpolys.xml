@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ListenOpolys">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/ListenOpolys.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
