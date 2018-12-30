@@ -7,24 +7,24 @@ package listenopolys.models;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javafx.util.Duration;
+
+
 /**
  *
  * @author husoeur
  */
 public class Playlist {
     private String title;
-    private Time duration;
     private ObservableList<Track> playlist;
     
     public Playlist(String title){
         this.title=title;
-        this.duration=new Time(0,0,0);
         playlist=FXCollections.observableArrayList();
     }
    
     public void addTrack(Track t){
             playlist.add(t);
-            duration.addTime(t.getDuration());
     }
     
     public void removeTrack(String filePath){

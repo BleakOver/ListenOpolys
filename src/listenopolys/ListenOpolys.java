@@ -6,10 +6,14 @@
 package listenopolys;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import listenopolys.controllers.FXMLController;
 
 /**
  *
@@ -19,7 +23,8 @@ public class ListenOpolys extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("views/FXMLView.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("views/FXMLView.fxml").openStream());
         
         Scene scene = new Scene(root);
         
@@ -27,6 +32,14 @@ public class ListenOpolys extends Application {
         primaryStage.setMinWidth(350);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        FXMLController controller = loader.getController();
+
+        primaryStage.setOnCloseRequest(windowEvent -> {
+            controller.close();
+            Platform.exit();
+            System.exit(0);
+        });
     }
 
     /**

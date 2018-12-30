@@ -5,6 +5,18 @@
  */
 package listenopolys.models;
 
+
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 /**
  *
  * @author husoeur
@@ -14,15 +26,30 @@ public class Track {
    private String genre;
    private String filePath;
    private int year;
-   private Time duration;
+   private Duration duration;
    
    
-   public Track(String title, String filePath, String genre, int year, Time duration){
+   public Track(String title, String filePath, String genre, int year){
        this.genre=genre;
        this.filePath=filePath;
        this.title=title;
        this.year=year;
-       this.duration=duration;
+       File file = new File(filePath);
+       /*AudioInputStream audio = null;
+       try {
+           audio = AudioSystem.getAudioInputStream(file);
+       } catch (UnsupportedAudioFileException e) {
+           e.printStackTrace();
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+       duration = new Duration((audio.getFrameLength()/audio.getFormat().getFrameRate()) * 1000);*/
+       Media media = new Media(file.toURI().toString());
+       MediaPlayer mp = new MediaPlayer(media);
+       mp.setOnReady(()->{
+           duration = mp.getTotalDuration();
+       });
+
    }
    
    public int getYear(){
@@ -37,7 +64,7 @@ public class Track {
        return this.genre;
    }
    
-   public Time getDuration(){
+   public Duration getDuration(){
        return this.duration;
    }
    

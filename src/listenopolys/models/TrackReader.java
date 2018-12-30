@@ -11,6 +11,7 @@ import java.util.Collection;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 /**
  *
@@ -57,12 +58,18 @@ public class TrackReader {
     
     public void stop(){
         player.stop();
+        player.seek(new Duration(0));
     }
 
     public void setRepeatTo(boolean repeat){
         player.setCycleCount((repeat) ? MediaPlayer.INDEFINITE : 1);
     }
-    
+
+    public MediaPlayer getPlayer(){
+        return player;
+    }
+
+
     public String getStatus(){
         return player.getStatus().toString();
     }

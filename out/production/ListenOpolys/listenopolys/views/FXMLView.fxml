@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <GridPane id="structure" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLController">
     <children>
-        <GridPane id="menu" GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+        <GridPane fx:id="menu" GridPane.columnSpan="1" GridPane.rowSpan="2">
             <children>
-                <ListView fx:id="viewPlaylists" onMouseClicked="#viewPlaylistsClicked" GridPane.rowIndex="0" />
+                <ListView fx:id="viewPlaylists" onMouseClicked="#viewPlaylistsClicked" />
                 <ListView fx:id="viewTracks" onMouseClicked="#viewTracksClicked" GridPane.rowIndex="2" />
             </children>
             <columnConstraints>
@@ -24,18 +29,35 @@
             </rowConstraints>
         </GridPane>
 
-        <GridPane id="media" GridPane.columnIndex="1" GridPane.rowIndex="0">
-            <children>
-            </children>
-        </GridPane>
+        <BorderPane fx:id="media" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <bottom>
+            <AnchorPane prefHeight="0.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Slider fx:id="sliderMedia" onMousePressed="#sliderMediaClickIn" onMouseReleased="#sliderMediaClickOut" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="labelTotalTime" layoutX="518.0" layoutY="-1.0" text="--:--" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="labelCurrentTime" layoutX="466.0" layoutY="-1.0" text="--:--" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="503.0" layoutY="-1.0" text="/" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Slider fx:id="sliderVolume" layoutX="177.0" layoutY="160.0" orientation="VERTICAL" value="50.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+         </right>
+        </BorderPane>
 
-        <GridPane id="player" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <GridPane fx:id="player" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
-                <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" text="Play" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <Button fx:id="buttonStop" onAction="#buttonStopClicked" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Button fx:id="buttonRepeat" mnemonicParsing="false" onAction="#buttonRepeatClicked" text="Repeat: OFF" GridPane.columnIndex="2" />
+                <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" text="Play" />
+                <Button fx:id="buttonStop" onAction="#buttonStopClicked" text="Stop" GridPane.columnIndex="1" />
+                <ToggleButton fx:id="buttonRepeat" mnemonicParsing="false" onAction="#buttonRepeatClicked" text="Repeat" GridPane.columnIndex="2" />
+                <ToggleButton fx:id="buttonRandom" mnemonicParsing="false" onAction="#buttonRandomClicked" text="Random" GridPane.columnIndex="3" />
             </children>
          <columnConstraints>
+            <ColumnConstraints />
             <ColumnConstraints />
             <ColumnConstraints />
             <ColumnConstraints />
@@ -44,6 +66,7 @@
             <RowConstraints />
          </rowConstraints>
         </GridPane>
+
     </children>
     <columnConstraints>
         <ColumnConstraints percentWidth="30" />
