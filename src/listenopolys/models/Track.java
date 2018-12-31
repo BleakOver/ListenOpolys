@@ -23,27 +23,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class Track {
    private String title;
-   private String genre;
    private String filePath;
-   private int year;
    private Duration duration;
    
    
-   public Track(String title, String filePath, String genre, int year){
-       this.genre=genre;
+   public Track( String filePath){
        this.filePath=filePath;
-       this.title=title;
-       this.year=year;
        File file = new File(filePath);
-       /*AudioInputStream audio = null;
-       try {
-           audio = AudioSystem.getAudioInputStream(file);
-       } catch (UnsupportedAudioFileException e) {
-           e.printStackTrace();
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
-       duration = new Duration((audio.getFrameLength()/audio.getFormat().getFrameRate()) * 1000);*/
+       title=file.getName();
        Media media = new Media(file.toURI().toString());
        MediaPlayer mp = new MediaPlayer(media);
        mp.setOnReady(()->{
@@ -52,16 +39,8 @@ public class Track {
 
    }
    
-   public int getYear(){
-       return this.year;
-   }
-   
    public String getTitle(){
        return this.title;
-   }
-   
-   public String getGenre(){
-       return this.genre;
    }
    
    public Duration getDuration(){

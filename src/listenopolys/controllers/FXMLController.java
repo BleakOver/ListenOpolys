@@ -5,11 +5,13 @@
  */
 package listenopolys.controllers;
 
+import java.io.File;
 import java.net.URL;
 
 import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
 import java.util.*;
@@ -103,12 +105,12 @@ public class FXMLController implements Initializable, TrackReaderListener {
         playlists = new PlaylistServices();
         viewPlaylists.setItems(playlists.getPlaylistList());
         playlists.addPlaylist(new Playlist("Hello World!"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test", "C:\\Users\\enzo_\\Downloads\\16061.mp3", "rock", 1995));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test2", "C:\\Users\\enzo_\\Music\\Marshmello - Alone (Official Music Video).mp3", "rock", 1995));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test3", "hugoladobe.wav", "rock", 1995));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test4", "hugoladobe.wav", "rock", 1995));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test5", "hugoladobe.wav", "rock", 1995));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("test6", "hugoladobe.wav", "rock", 1995));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("C:\\Users\\enzo_\\Downloads\\16061.mp3"));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("C:\\Users\\enzo_\\Music\\Marshmello - Alone (Official Music Video).mp3"));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
+        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
         timer = new Timer();
     }
 
@@ -222,6 +224,29 @@ public class FXMLController implements Initializable, TrackReaderListener {
         random = !random;
         if(random){
             randomizeRandomList();
+        }
+    }
+
+    public void buttonAddTrackClicked(){
+        if(viewPlaylists.getSelectionModel().getSelectedItem() != null){
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Select tracks");
+            fileChooser.setInitialDirectory(new File(System.getProperty("user.home")+"\\Music"));
+            fileChooser.getExtensionFilters().add(
+                    new FileChooser.ExtensionFilter("Audio(.mp3, .wav, .aac)", "*.mp3", "*.wav", "*.aac")
+            );
+            List<File> fileList = fileChooser.showOpenMultipleDialog(viewTracks.getScene().getWindow());
+            if(fileList!=null) {
+                for (File file : fileList) {
+                    viewPlaylists.getSelectionModel().getSelectedItem().addTrack(new Track(file.getPath()));
+                }
+            }
+        }
+    }
+
+    public void buttonRemoveTrackClicked(){
+        if(viewTracks.getSelectionModel().getSelectedItem()!=null){
+            viewPlaylists.getSelectionModel().getSelectedItem().removeTrack(viewTracks.getSelectionModel().getSelectedItem().getFilePath());
         }
     }
 

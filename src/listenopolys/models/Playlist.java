@@ -53,7 +53,11 @@ public class Playlist {
     public String getTitle(){
         return this.title;
     }
-    
+
+    public boolean contains(Track track){
+        return playlist.contains(track);
+    }
+
     public boolean equals(Object o){
         if(o==null){
             return false;
