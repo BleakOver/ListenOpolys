@@ -11,5 +11,5 @@ package listenopolys.models;
  */
 public interface Loader {
     
-    public void load();
+    public PlaylistService load();
 }

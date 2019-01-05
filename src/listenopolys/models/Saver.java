@@ -11,5 +11,5 @@ package listenopolys.models;
  */
 public interface Saver {
     
-    public void save();
+    public void save(PlaylistService playlistService);
 }

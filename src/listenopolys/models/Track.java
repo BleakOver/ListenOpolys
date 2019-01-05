@@ -15,13 +15,14 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 /**
  *
  * @author husoeur
  */
-public class Track {
+public class Track implements Serializable {
    private String title;
    private String filePath;
    private Duration duration;

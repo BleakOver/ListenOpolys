@@ -9,15 +9,24 @@ import javafx.collections.ObservableList;
 
 import javafx.util.Duration;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+
 
 /**
  *
  * @author husoeur
  */
-public class Playlist {
+public class Playlist implements Serializable {
     private String title;
-    private ObservableList<Track> playlist;
-    
+    private Collection<Track> playlist;
+
+    public Playlist(String title, Collection<Track> collection){
+        this.title = title;
+        this.playlist = collection;
+    }
+
     public Playlist(String title){
         this.title=title;
         playlist=FXCollections.observableArrayList();
@@ -36,7 +45,7 @@ public class Playlist {
         }
     }
     
-    public ObservableList<Track> getTracks(){
+    public Collection<Track> getTracks(){
         return playlist;
     }
     
@@ -70,6 +79,19 @@ public class Playlist {
         }
         Playlist p = (Playlist) o;
         return title.equals(p.getTitle());
-                
+    }
+
+    public Playlist getSerializable(){
+        Collection<Track> collectionSave = FXCollections.observableArrayList(playlist);
+        try {
+            return new Playlist(this.title, new ArrayList<>(this.playlist));
+        }
+        finally {
+            playlist = collectionSave;
+        }
+    }
+
+    public void setNotSerializable(){
+        playlist = FXCollections.observableArrayList(playlist);
     }
 }

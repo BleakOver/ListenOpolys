@@ -8,9 +8,9 @@ package listenopolys.controllers;
 import java.io.File;
 import java.net.URL;
 
-import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
@@ -20,7 +20,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import listenopolys.models.*;
-import listenopolys.models.PlaylistServices;
+import listenopolys.models.PlaylistService;
 
 /**
  *
@@ -55,7 +55,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
     @FXML
     private Label labelCurrentTime;
 
-    private PlaylistServices playlists;
+    private PlaylistService playlists;
     private TrackReader reader;
     private boolean repeat;
     private boolean random;
@@ -102,22 +102,16 @@ public class FXMLController implements Initializable, TrackReaderListener {
         });
         repeat=false;
         random=false;
-        playlists = new PlaylistServices();
-        viewPlaylists.setItems(playlists.getPlaylistList());
-        playlists.addPlaylist(new Playlist("Hello World!"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("C:\\Users\\enzo_\\Downloads\\16061.mp3"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("C:\\Users\\enzo_\\Music\\Marshmello - Alone (Official Music Video).mp3"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
-        playlists.getPlaylist("Hello World!").addTrack(new Track("hugoladobe.wav"));
+        playlists = new LoaderFile().load();
+        if(playlists==null) playlists = new PlaylistService();
+        viewPlaylists.setItems((ObservableList<Playlist>)playlists.getPlaylistList());
         timer = new Timer();
     }
 
 
     public void viewPlaylistsClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null)
-            viewTracks.setItems(viewPlaylists.getSelectionModel().getSelectedItem().getTracks());
+            viewTracks.setItems((ObservableList<Track>) viewPlaylists.getSelectionModel().getSelectedItem().getTracks());
     }
 
     public void viewTracksClicked(){
@@ -248,11 +242,13 @@ public class FXMLController implements Initializable, TrackReaderListener {
         if(viewTracks.getSelectionModel().getSelectedItem()!=null){
             viewPlaylists.getSelectionModel().getSelectedItem().removeTrack(viewTracks.getSelectionModel().getSelectedItem().getFilePath());
         }
+        viewTracksClicked();
     }
 
     public void close(){
         timer.cancel();
         timer.purge();
+        new SaverFile().save(playlists.getSerializable());
     }
 
 }
