@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import listenopolys.models.Playlist;
@@ -70,12 +72,13 @@ public class PlaylistService implements Serializable {
 
     public PlaylistService getSerializable(){
         Collection<Playlist> collectionSave = FXCollections.observableArrayList(playlistList);
-        for(Playlist p : playlistList){
-            playlistList.add(p.getSerializable());
-            playlistList.remove(p);
+        playlistList = new ArrayList<>(playlistList);
+        for(int i = 0; i<playlistList.size(); i++){
+            playlistList.add(((ArrayList<Playlist>)playlistList).get(i).getSerializable());
+            ((ArrayList<Playlist>)playlistList).remove(i);
         }
         try {
-            return new PlaylistService(new ArrayList<>(playlistList));
+            return new PlaylistService(playlistList);
         }
         finally {
             playlistList = collectionSave;

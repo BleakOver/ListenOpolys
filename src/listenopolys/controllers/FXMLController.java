@@ -6,12 +6,17 @@
 package listenopolys.controllers;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.*;
@@ -221,6 +226,10 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    public void addPlaylist(Playlist playlist) {
+        playlists.addPlaylist(playlist);
+    }
+
     public void buttonAddTrackClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null){
             FileChooser fileChooser = new FileChooser();
@@ -235,6 +244,27 @@ public class FXMLController implements Initializable, TrackReaderListener {
                     viewPlaylists.getSelectionModel().getSelectedItem().addTrack(new Track(file.getPath()));
                 }
             }
+        }
+    }
+
+    public void buttonAddPlaylistClicked(){
+        FXMLLoader loader = new FXMLLoader();
+        Parent root;
+        Scene scene;
+        Stage stage;
+        try {
+            root = loader.load(getClass().getResource("../views/FXMLAjout.fxml").openStream());
+            scene = new Scene(root);
+            stage = new Stage();
+            stage.setHeight(200);
+            stage.setWidth(254);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+            FXMLControllerAjout controller = loader.getController();
+            controller.setController(this);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

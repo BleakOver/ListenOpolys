@@ -14,11 +14,16 @@
 
 <GridPane id="structure" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLController">
     <children>
-        <GridPane fx:id="menu" GridPane.columnSpan="1" GridPane.rowSpan="2">
+        <GridPane fx:id="menu" alignment="TOP_CENTER" GridPane.columnSpan="1" GridPane.rowSpan="2">
             <children>
                 <ListView fx:id="viewPlaylists" onMouseClicked="#viewPlaylistsClicked" />
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="buttonAddPlaylist" mnemonicParsing="false" onAction="#buttonAddPlaylistClicked" text="Add" />
+               </children>
+            </HBox>
                 <ListView fx:id="viewTracks" onMouseClicked="#viewTracksClicked" GridPane.rowIndex="2" />
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
                   <Button fx:id="buttonAddTrack" mnemonicParsing="false" onAction="#buttonAddTrackClicked" text="Add" />
                   <Button fx:id="buttonRemoveTrack" mnemonicParsing="false" onAction="#buttonRemoveTrackClicked" text="Remove selected" />

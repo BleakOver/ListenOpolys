@@ -16,7 +16,6 @@ public class LoaderFile implements Loader {
             playlistService = (PlaylistService)objectInputStream.readObject();
             playlistService.setNotSerializable();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
