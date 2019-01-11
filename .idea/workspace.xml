@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7337c288-538e-43ed-9e1e-3a6eae38067c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/LoaderFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/LoaderFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savefile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="280" selection-start-line="280" selection-end-line="280" />
+            <state relative-caret-position="338">
+              <caret line="279" column="101" selection-start-line="279" selection-start-column="101" selection-end-line="279" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7114#7115#0" expanded="true" />
@@ -57,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="639">
-              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
@@ -99,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="644">
               <caret line="76" column="89" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
               <folding>
                 <element signature="e#670#671#0" expanded="true" />
@@ -168,13 +155,13 @@
         <option value="$PROJECT_DIR$/src/listenopolys/models/SaverFile.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/ChargerFile.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/Playlist.java" />
-        <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" />
         <option value="$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml" />
-        <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" />
+        <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" />
       </list>
     </option>
   </component>
@@ -237,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547196309302" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547196584749" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.1/lib" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -284,7 +271,7 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17293233" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17293233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -293,7 +280,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291714" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946293" visible="true" weight="0.34279227" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946293" visible="true" weight="0.24177071" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -391,14 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -444,18 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="280" selection-start-line="280" selection-end-line="280" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7114#7115#0" expanded="true" />
-            <element signature="e#7161#7162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/ListenOpolys.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -487,11 +454,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="644">
           <caret line="76" column="89" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
           <folding>
             <element signature="e#670#671#0" expanded="true" />
             <element signature="e#716#717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="279" column="101" selection-start-line="279" selection-start-column="101" selection-end-line="279" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7114#7115#0" expanded="true" />
+            <element signature="e#7161#7162#0" expanded="true" />
           </folding>
         </state>
       </provider>

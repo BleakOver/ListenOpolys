@@ -20,6 +20,7 @@
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
                   <Button fx:id="buttonAddPlaylist" mnemonicParsing="false" onAction="#buttonAddPlaylistClicked" text="Add" />
+                  <Button fx:id="buttonRemovePlaylist" mnemonicParsing="false" onAction="#buttonRemovePlaylistClicked" text="Remove selected" />
                </children>
             </HBox>
                 <ListView fx:id="viewTracks" onMouseClicked="#viewTracksClicked" GridPane.rowIndex="2" />

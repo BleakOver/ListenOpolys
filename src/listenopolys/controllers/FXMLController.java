@@ -275,6 +275,12 @@ public class FXMLController implements Initializable, TrackReaderListener {
         viewTracksClicked();
     }
 
+    public void buttonRemovePlaylistClicked(){
+        if(viewPlaylists.getSelectionModel().getSelectedItem()!=null){
+            playlists.removePlaylist(viewPlaylists.getSelectionModel().getSelectedItem().getTitle());
+        }
+        viewPlaylistsClicked();
+    }
     public void close(){
         timer.cancel();
         timer.purge();
