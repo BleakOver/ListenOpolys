@@ -12,6 +12,7 @@ import java.net.URL;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -66,6 +67,8 @@ public class FXMLController implements Initializable, TrackReaderListener {
     private boolean random;
     private Timer timer;
     private List<Integer> randomList;
+    private Playlist runningPlaylist;
+    private int runningTrackIndex;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -125,6 +128,8 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 reader.stop();
                 buttonPlayPause.setText("Play");
             }
+            runningPlaylist = viewPlaylists.getSelectionModel().getSelectedItem();
+            runningTrackIndex = viewTracks.getSelectionModel().getSelectedIndex();
             reader = new TrackReader(viewTracks.getSelectionModel().getSelectedItem(), repeat);
             reader.getPlayer().setVolume(sliderVolume.getValue() / 100.0);
             reader.addListener(this);
@@ -230,6 +235,30 @@ public class FXMLController implements Initializable, TrackReaderListener {
         playlists.addPlaylist(playlist);
     }
 
+    public void buttonPreviousClicked() {
+        if(reader != null){
+            if(sliderMedia.getValue()>1){
+                reader.getPlayer().seek(Duration.ZERO);
+                return;
+            }
+            buttonStopClicked();
+            viewPlaylists.getSelectionModel().select(runningPlaylist);
+            viewPlaylistsClicked();
+            viewTracks.getSelectionModel().select((runningTrackIndex>0) ? runningTrackIndex-1 : viewTracks.getItems().size()-1);
+            viewTracksClicked();
+            reader.getPlayer().setOnReady(this::buttonPlayPauseClicked);
+        }
+    }
+
+    public void buttonNextClicked() {
+        buttonStopClicked();
+        viewPlaylists.getSelectionModel().select(runningPlaylist);
+        viewPlaylistsClicked();
+        viewTracks.getSelectionModel().select((runningTrackIndex+1 == viewTracks.getItems().size()) ? 0 : runningTrackIndex+1);
+        viewTracksClicked();
+        reader.getPlayer().setOnReady(this::buttonPlayPauseClicked);
+    }
+
     public void buttonAddTrackClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null){
             FileChooser fileChooser = new FileChooser();
@@ -283,7 +312,13 @@ public class FXMLController implements Initializable, TrackReaderListener {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
+                if(viewPlaylists.getSelectionModel().getSelectedItem().equals(runningPlaylist)) {
+                    viewTracks.setItems(null);
+                    buttonStopClicked();
+                    reader = null;
+                }
                 playlists.removePlaylist(viewPlaylists.getSelectionModel().getSelectedItem().getTitle());
+                runningPlaylist = null;
             }
         }
         viewPlaylistsClicked();
@@ -293,5 +328,4 @@ public class FXMLController implements Initializable, TrackReaderListener {
         timer.purge();
         new SaverFile().save(playlists.getSerializable());
     }
-
 }
