@@ -17,14 +17,15 @@
         <GridPane fx:id="menu" alignment="TOP_CENTER" GridPane.columnSpan="1" GridPane.rowSpan="2">
             <children>
                 <ListView fx:id="viewPlaylists" onMousePressed="#viewPlaylistsClicked" />
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <HBox alignment="TOP_CENTER" blendMode="ADD" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
                   <Button fx:id="buttonAddPlaylist" mnemonicParsing="false" onAction="#buttonAddPlaylistClicked" text="Add" />
+                  <Button fx:id="buttonModifyPlaylist" mnemonicParsing="false" onAction="#buttonModifyPlaylistClicked" text="Modify selected" />
                   <Button fx:id="buttonRemovePlaylist" mnemonicParsing="false" onAction="#buttonRemovePlaylistClicked" text="Remove selected" />
                </children>
             </HBox>
                 <ListView fx:id="viewTracks" onMousePressed="#viewTracksClicked" GridPane.rowIndex="2" />
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <HBox alignment="TOP_CENTER" blendMode="ADD" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
                   <Button fx:id="buttonAddTrack" mnemonicParsing="false" onAction="#buttonAddTrackClicked" text="Add" />
                   <Button fx:id="buttonRemoveTrack" mnemonicParsing="false" onAction="#buttonRemoveTrackClicked" text="Remove selected" />
@@ -46,17 +47,17 @@
          <bottom>
             <AnchorPane prefHeight="0.0" prefWidth="560.0" BorderPane.alignment="CENTER">
                <children>
-                  <Slider fx:id="sliderMedia" onMousePressed="#sliderMediaClickIn" onMouseReleased="#sliderMediaClickOut" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0" />
-                  <Label fx:id="labelTotalTime" layoutX="518.0" layoutY="-1.0" text="--:--" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
-                  <Label fx:id="labelCurrentTime" layoutX="466.0" layoutY="-1.0" text="--:--" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
-                  <Label layoutX="503.0" layoutY="-1.0" text="/" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0" />
+                  <Slider fx:id="sliderMedia" blendMode="ADD" onMousePressed="#sliderMediaClickIn" onMouseReleased="#sliderMediaClickOut" prefHeight="18.0" prefWidth="469.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="labelTotalTime" layoutX="518.0" layoutY="-1.0" text="--:--" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="labelCurrentTime" layoutX="466.0" layoutY="-1.0" text="--:--" textFill="WHITE" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="503.0" layoutY="-1.0" text="/" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
          </bottom>
          <right>
             <AnchorPane prefHeight="459.0" prefWidth="0.0" BorderPane.alignment="CENTER">
                <children>
-                  <Slider fx:id="sliderVolume" layoutX="177.0" layoutY="160.0" orientation="VERTICAL" value="50.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <Slider fx:id="sliderVolume" blendMode="ADD" layoutX="177.0" layoutY="160.0" orientation="VERTICAL" value="50.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                </children>
             </AnchorPane>
          </right>
@@ -64,7 +65,7 @@
 
         <GridPane fx:id="player" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
-            <HBox alignment="CENTER" spacing="25.0">
+            <HBox alignment="CENTER" blendMode="ADD" spacing="25.0">
                <children>
                   <Button fx:id="buttonPrevious" mnemonicParsing="false" onAction="#buttonPreviousClicked" text="Previous" />
                       <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" text="Play" />

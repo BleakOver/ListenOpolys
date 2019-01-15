@@ -20,6 +20,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import javafx.fxml.FXML;
@@ -136,8 +137,8 @@ public class FXMLController implements Initializable, TrackReaderListener {
             timer.cancel();
             timer.purge();
             Duration dur = viewTracks.getSelectionModel().getSelectedItem().getDuration();
-            labelTotalTime.setText((int)(dur.toMinutes())+":"+(int)(dur.toSeconds())%60);
-            labelCurrentTime.setText("0:0");
+            labelTotalTime.setText(new DecimalFormat("00").format((int)(dur.toMinutes()))+":"+new DecimalFormat("00").format((int)(dur.toSeconds())%60));
+            labelCurrentTime.setText("00:00");
             sliderMedia.setValue(0);
         }
     }
@@ -177,7 +178,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         if(reader != null) {
             reader.stop();
             sliderMedia.setValue(0);
-            labelCurrentTime.setText("0:0");
+            labelCurrentTime.setText("00:00");
             buttonPlayPause.setText("Play");
             timer.cancel();
             timer.purge();
@@ -274,6 +275,36 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 }
             }
         }
+    }
+
+    public void buttonModifyPlaylistClicked(){
+        if(viewPlaylists.getSelectionModel().getSelectedItem() != null) {
+            FXMLLoader loader = new FXMLLoader();
+            Parent root;
+            Scene scene;
+            Stage stage;
+            try {
+                root = loader.load(getClass().getResource("../views/FXMLModif.fxml").openStream());
+                scene = new Scene(root);
+                stage = new Stage();
+                stage.setHeight(200);
+                stage.setWidth(254);
+                stage.setResizable(false);
+                stage.setScene(scene);
+                stage.show();
+                FXMLControllerModif controller = loader.getController();
+                controller.setController(this);
+                controller.setInitialValue(viewPlaylists.getSelectionModel().getSelectedItem().getTitle());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updatePlaylistTitle(String initialTitle, String newTitle){
+        Playlist toUpdate = playlists.getPlaylist(initialTitle);
+        toUpdate.setTitle(newTitle);
+        viewPlaylists.refresh();
     }
 
     public void buttonAddPlaylistClicked(){

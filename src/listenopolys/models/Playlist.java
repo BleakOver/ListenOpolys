@@ -58,7 +58,11 @@ public class Playlist implements Serializable {
         }
         return null;
     }
-    
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getTitle(){
         return this.title;
     }
@@ -94,4 +98,5 @@ public class Playlist implements Serializable {
     public void setNotSerializable(){
         playlist = FXCollections.observableArrayList(playlist);
     }
+
 }

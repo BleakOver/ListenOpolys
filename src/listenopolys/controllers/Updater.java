@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 
 import javafx.scene.media.MediaPlayer;
+
+import java.text.DecimalFormat;
 import java.util.TimerTask;
 
 public class Updater extends TimerTask {
@@ -18,7 +20,10 @@ public class Updater extends TimerTask {
 
     private MediaPlayer mediaPlayer;
 
+    private DecimalFormat decimalFormat;
+
     public Updater(Slider slider, Label label, MediaPlayer mediaPlayer){
+        decimalFormat = new DecimalFormat("00");
         labelCurrentTime = label;
         sliderMedia = slider;
         this.mediaPlayer = mediaPlayer;
@@ -27,7 +32,7 @@ public class Updater extends TimerTask {
     public void run(){
         Platform.runLater(()-> {
             sliderMedia.setValue((mediaPlayer.getCurrentTime().toMillis() * 100) / mediaPlayer.getTotalDuration().toMillis());
-            labelCurrentTime.setText((int) (mediaPlayer.getCurrentTime().toMinutes()) + ":" + (int) (mediaPlayer.getCurrentTime().toSeconds()) % 60);
+            labelCurrentTime.setText(decimalFormat.format((int) (mediaPlayer.getCurrentTime().toMinutes())) + ":" + decimalFormat.format((int) (mediaPlayer.getCurrentTime().toSeconds()) % 60));
         }
         );
     }

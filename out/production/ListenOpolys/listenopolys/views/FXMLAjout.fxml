@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="164.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLControllerAjout">
    <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="244.0">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="244.0">
          <children>
             <HBox alignment="CENTER" prefHeight="123.0" prefWidth="244.0">
                <children>

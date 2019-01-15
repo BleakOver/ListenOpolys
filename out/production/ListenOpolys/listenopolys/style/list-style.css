@@ -1,0 +1,30 @@
+.list-cell{
+     -fx-background-color: transparent;
+     -fx-text-fill: white;
+}
+
+.list-cell:selected{
+    -fx-background-color: #ffffff50;
+}
+
+.list-cell:filled:hover{
+    -fx-background-color: #ffffff20;
+}
+
+.list-cell:selected:hover{
+    -fx-background-color: #ffffff80;
+}
+
+.list-view{
+    -fx-background-color: radial-gradient(focus-distance -60%, center 50% 50% , radius 85%, #252545 , #000000);
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.list-view:hover{
+    -fx-border-width: 2px;
+}
+
+#structure{
+    -fx-background-color: radial-gradient(focus-distance 0%, center 50% 25% , radius 55%, #252545 , #101020);
+}
