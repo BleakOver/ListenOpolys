@@ -70,6 +70,9 @@ public class PlaylistService implements Serializable {
         return playlistList;
     }
 
+    /**
+     * @return playlist service serializable
+     */
     public PlaylistService getSerializable(){
         Collection<Playlist> collectionSave = FXCollections.observableArrayList(playlistList);
         playlistList = new ArrayList<>(playlistList);
@@ -85,6 +88,9 @@ public class PlaylistService implements Serializable {
         }
     }
 
+    /**
+     * set observable
+     */
     public void setNotSerializable() {
         playlistList = FXCollections.observableArrayList(playlistList);
         for (Playlist p : playlistList){

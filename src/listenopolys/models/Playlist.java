@@ -15,8 +15,7 @@ import java.util.Collection;
 
 
 /**
- *
- * @author husoeur
+ * a playlist
  */
 public class Playlist implements Serializable {
     private String title;
@@ -85,6 +84,9 @@ public class Playlist implements Serializable {
         return title.equals(p.getTitle());
     }
 
+    /**
+     * @return playlist serializable
+     */
     public Playlist getSerializable(){
         Collection<Track> collectionSave = FXCollections.observableArrayList(playlist);
         try {
@@ -95,6 +97,9 @@ public class Playlist implements Serializable {
         }
     }
 
+    /**
+     * set observable
+     */
     public void setNotSerializable(){
         playlist = FXCollections.observableArrayList(playlist);
     }

@@ -24,11 +24,17 @@ public class FXMLControllerModif implements Initializable {
 
     }
 
+    /**
+     * @param value initial value of the playlist to update
+     */
     public void setInitialValue(String value){
         textFieldTitle.setText(value);
         initialValue = value;
     }
 
+    /**
+     * update the playlist title
+     */
     public void buttonModifyPlaylistClicked() {
         if(controller!=null && textFieldTitle.getText()!=""){
             controller.updatePlaylistTitle(initialValue, textFieldTitle.getText());
@@ -37,6 +43,10 @@ public class FXMLControllerModif implements Initializable {
         stage.close();
     }
 
+    /**
+     * set the controller to use for adding the playlist
+     * @param controller controller to use for adding the playlist
+     */
     public void setController(FXMLController controller){
         this.controller = controller;
     }

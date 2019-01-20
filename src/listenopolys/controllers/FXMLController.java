@@ -118,11 +118,17 @@ public class FXMLController implements Initializable, TrackReaderListener {
     }
 
 
+    /**
+     * initialize the list-view of the tracks
+     */
     public void viewPlaylistsClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null)
             viewTracks.setItems((ObservableList<Track>) viewPlaylists.getSelectionModel().getSelectedItem().getTracks());
     }
 
+    /**
+     * initialize everything for the selected song to be played
+     */
     public void viewTracksClicked(){
         if(viewTracks.getSelectionModel().getSelectedItem() != null && viewPlaylists.getSelectionModel().getSelectedItem() != null) {
             if(reader!=null) {
@@ -143,6 +149,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * move to the selected time of the song
+     */
     public void sliderMediaClickOut(){
         if(reader != null) {
             reader.getPlayer().seek(viewTracks.getSelectionModel().getSelectedItem().getDuration().multiply(sliderMedia.getValue() / 100.0));
@@ -151,11 +160,17 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * stops the action of the timer
+     */
     public void sliderMediaClickIn(){
         timer.cancel();
         timer.purge();
     }
 
+    /**
+     * pause or play the selected song
+     */
     public void buttonPlayPauseClicked(){
         if(reader == null) return;
         if(reader.getStatus().equals("PAUSED")||reader.getStatus().equals("READY")||reader.getStatus().equals("STOPPED")){
@@ -174,6 +189,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * stop the selected song
+     */
     public void buttonStopClicked(){
         if(reader != null) {
             reader.stop();
@@ -185,6 +203,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * perform the correct action when the song is over
+     */
     public void endOfMedia() {
         if (!repeat) {
             timer.cancel();
@@ -211,6 +232,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * change the repetition mode of the song
+     */
     public void buttonRepeatClicked(){
         repeat = !repeat;
         if(reader!=null) {
@@ -218,6 +242,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * randomize the list of the future songs to be played
+     */
     private void randomizeRandomList() {
         randomList = new ArrayList<>();
         for (int i =0 ; i<viewTracks.getItems().size() ; i++) randomList.add(i);
@@ -225,6 +252,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         Collections.shuffle(randomList);
     }
 
+    /**
+     * change the random mode of the player
+     */
     public void buttonRandomClicked(){
         random = !random;
         if(random){
@@ -232,10 +262,17 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * add a playlist to the player
+     * @param playlist playlist to add
+     */
     public void addPlaylist(Playlist playlist) {
         playlists.addPlaylist(playlist);
     }
 
+    /**
+     * select and play the previous song
+     */
     public void buttonPreviousClicked() {
         if(reader != null){
             if(sliderMedia.getValue()>1){
@@ -251,6 +288,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * select and play the next song
+     */
     public void buttonNextClicked() {
         buttonStopClicked();
         viewPlaylists.getSelectionModel().select(runningPlaylist);
@@ -260,6 +300,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         reader.getPlayer().setOnReady(this::buttonPlayPauseClicked);
     }
 
+    /**
+     * open a window to add your songs
+     */
     public void buttonAddTrackClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null){
             FileChooser fileChooser = new FileChooser();
@@ -277,6 +320,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * open a window to modify a playlist's name
+     */
     public void buttonModifyPlaylistClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem() != null) {
             FXMLLoader loader = new FXMLLoader();
@@ -286,6 +332,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
             try {
                 root = loader.load(getClass().getResource("../views/FXMLModif.fxml").openStream());
                 scene = new Scene(root);
+                scene.getStylesheets().add(getClass().getResource("../style/list-style.css").toExternalForm());
                 stage = new Stage();
                 stage.setHeight(200);
                 stage.setWidth(254);
@@ -301,12 +348,20 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * update the title of a playlist
+     * @param initialTitle initial title of the playlist to update
+     * @param newTitle new title to set to the playlist
+     */
     public void updatePlaylistTitle(String initialTitle, String newTitle){
         Playlist toUpdate = playlists.getPlaylist(initialTitle);
         toUpdate.setTitle(newTitle);
         viewPlaylists.refresh();
     }
 
+    /**
+     * open a window to add a new playlist
+     */
     public void buttonAddPlaylistClicked(){
         FXMLLoader loader = new FXMLLoader();
         Parent root;
@@ -315,6 +370,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         try {
             root = loader.load(getClass().getResource("../views/FXMLAjout.fxml").openStream());
             scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("../style/list-style.css").toExternalForm());
             stage = new Stage();
             stage.setHeight(200);
             stage.setWidth(254);
@@ -328,6 +384,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
     }
 
+    /**
+     * remove the selected song
+     */
     public void buttonRemoveTrackClicked(){
         if(viewTracks.getSelectionModel().getSelectedItem()!=null){
             viewPlaylists.getSelectionModel().getSelectedItem().removeTrack(viewTracks.getSelectionModel().getSelectedItem().getFilePath());
@@ -335,6 +394,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
         viewTracksClicked();
     }
 
+    /**
+     * open a window to confirm the choice of deleting the selected playlist
+     */
     public void buttonRemovePlaylistClicked(){
         if(viewPlaylists.getSelectionModel().getSelectedItem()!=null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -354,6 +416,10 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
         viewPlaylistsClicked();
     }
+
+    /**
+     * close the timer and save the player's configuration
+     */
     public void close(){
         timer.cancel();
         timer.purge();

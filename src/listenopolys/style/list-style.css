@@ -21,10 +21,6 @@
     -fx-border-width: 1px;
 }
 
-.list-view:hover{
-    -fx-border-width: 2px;
-}
-
-#structure{
+.back{
     -fx-background-color: radial-gradient(focus-distance 0%, center 50% 25% , radius 55%, #252545 , #101020);
 }

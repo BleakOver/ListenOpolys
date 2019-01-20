@@ -10,6 +10,9 @@ import javafx.scene.media.MediaPlayer;
 import java.text.DecimalFormat;
 import java.util.TimerTask;
 
+/**
+ * a class used to update the slider of the song
+ */
 public class Updater extends TimerTask {
 
     @FXML

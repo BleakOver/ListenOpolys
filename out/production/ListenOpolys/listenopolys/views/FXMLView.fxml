@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane id="structure" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLController">
+<GridPane id="structure" prefHeight="600" prefWidth="800" styleClass="back" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLController">
     <children>
         <GridPane fx:id="menu" alignment="TOP_CENTER" GridPane.columnSpan="1" GridPane.rowSpan="2">
             <children>

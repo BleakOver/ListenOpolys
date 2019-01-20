@@ -21,6 +21,9 @@ public class FXMLControllerAjout implements Initializable {
 
     }
 
+    /**
+     * add the playlist to the player
+     */
     public void buttonAddPlaylistClicked(){
         if(controller!=null && textFieldTitle.getText()!=""){
             controller.addPlaylist(new Playlist(textFieldTitle.getText()));
@@ -29,6 +32,10 @@ public class FXMLControllerAjout implements Initializable {
         stage.close();
     }
 
+    /**
+     * set the controller to use for adding the playlist
+     * @param controller controller to use for adding the playlist
+     */
     public void setController(FXMLController controller){
         this.controller = controller;
     }
