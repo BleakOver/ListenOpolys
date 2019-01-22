@@ -29,7 +29,7 @@ public class ListenOpolys extends Application {
         Scene scene = new Scene(root);
 
         scene.getStylesheets().add(getClass().getResource("style/list-style.css").toExternalForm());
-        
+
         primaryStage.setMinHeight(200);
         primaryStage.setMinWidth(350);
         primaryStage.setScene(scene);

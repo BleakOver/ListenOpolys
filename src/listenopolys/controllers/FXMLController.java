@@ -5,10 +5,14 @@
  */
 package listenopolys.controllers;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+import com.sun.media.jfxmedia.events.AudioSpectrumEvent;
+import com.sun.media.jfxmedia.events.AudioSpectrumListener;
+import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
@@ -16,6 +20,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.XYChart;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -24,15 +30,16 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import listenopolys.models.*;
 import listenopolys.models.PlaylistService;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Node;
 
-/**
- *
- * @author enmora
- */
 public class FXMLController implements Initializable, TrackReaderListener {
 
     @FXML
@@ -62,6 +69,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
     @FXML
     private Label labelCurrentTime;
 
+    @FXML
+    private AreaChart<String, Number> graph;
+
     private PlaylistService playlists;
     private TrackReader reader;
     private boolean repeat;
@@ -70,6 +80,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
     private List<Integer> randomList;
     private Playlist runningPlaylist;
     private int runningTrackIndex;
+    private SpektrumListener spektrum;
+    private int BANDS;
+    private XYChart.Data[] graphData;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -109,6 +122,20 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 }
             }
         });
+        BANDS = 32;
+        XYChart.Series<String, Number> xyChart = new XYChart.Series<>();
+        graphData = new XYChart.Data[BANDS + 2];
+        for (int i = 0; i < graphData.length; i++) {
+            graphData[i] = new XYChart.Data<>(Integer.toString(i + 1), 0);
+            xyChart.getData().add(graphData[i]);
+        }
+        graph.getData().add(xyChart);
+        graph.getYAxis().setAutoRanging(false);
+        //graph.getYAxis().setTickLabelsVisible(false);
+        //graph.getYAxis().setOpacity(0);
+        graph.getXAxis().setTickLabelsVisible(false);
+        graph.getXAxis().setOpacity(0);
+
         repeat=false;
         random=false;
         playlists = new LoaderFile().load();
@@ -146,6 +173,8 @@ public class FXMLController implements Initializable, TrackReaderListener {
             labelTotalTime.setText(new DecimalFormat("00").format((int)(dur.toMinutes()))+":"+new DecimalFormat("00").format((int)(dur.toSeconds())%60));
             labelCurrentTime.setText("00:00");
             sliderMedia.setValue(0);
+            reader.getPlayer().setAudioSpectrumListener(new SpektrumListener(reader, graphData, BANDS));
+            reader.getPlayer().setAudioSpectrumNumBands(BANDS);
         }
     }
 
@@ -415,6 +444,12 @@ public class FXMLController implements Initializable, TrackReaderListener {
             }
         }
         viewPlaylistsClicked();
+    }
+
+    private float[] createFilledBuffer(int size, float fillValue) {
+        float[] floats = new float[size];
+        Arrays.fill(floats, fillValue);
+        return floats;
     }
 
     /**

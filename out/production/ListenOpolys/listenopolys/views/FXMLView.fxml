@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<<<<<<< HEAD
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Slider?>
@@ -35,12 +36,29 @@
             <columnConstraints>
                 <ColumnConstraints percentWidth="100" />
             </columnConstraints>
+=======
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane id="structure" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listenopolys.controllers.FXMLController">
+    <children>
+        <GridPane id="menu" GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+            <children>
+                <ListView fx:id="viewPlaylists" prefWidth="${viewPlaylists.parent.width}" GridPane.rowIndex="0" />
+                <ListView fx:id="viewTracks" prefWidth="${viewTracks.parent.width}" GridPane.rowIndex="2" />
+            <Button fx:id="addNewPlaylist" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="108.0" prefWidth="269.0" text="Add Playlist " GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="373.0" text="Add Track" GridPane.rowIndex="3" />
+            </children>
+>>>>>>> 31f162c3837475909e8ce043f150dd995bdf20de
             <rowConstraints>
                 <RowConstraints percentHeight="40" />
                 <RowConstraints percentHeight="10" />
                 <RowConstraints percentHeight="40" />
                 <RowConstraints percentHeight="10" />
             </rowConstraints>
+<<<<<<< HEAD
         </GridPane>
 
         <BorderPane fx:id="media" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -84,6 +102,31 @@
          </rowConstraints>
         </GridPane>
 
+=======
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+        </GridPane>
+
+        <GridPane id="media" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <children>
+            </children>
+        </GridPane>
+
+        <GridPane id="player" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <Button fx:id="buttonPlayPause" text="Play" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Button fx:id="buttonStop" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+>>>>>>> 31f162c3837475909e8ce043f150dd995bdf20de
     </children>
     <columnConstraints>
         <ColumnConstraints percentWidth="30" />

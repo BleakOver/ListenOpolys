@@ -2,51 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7337c288-538e-43ed-9e1e-3a6eae38067c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListenOpolys1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLAddPlaylistController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLPlaylistController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Load.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/PlaylistServices.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Save.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Time.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/AddPlaylistView$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/AddPlaylistView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/AddPlaylistView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/AddTrackView$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/AddTrackView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLAddPlaylistView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/View.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/listenopolys/models/SpektrumListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ListenOpolys.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/ListenOpolys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/controllers/FXMLController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/controllers/PlaylistServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Playlist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/PlaylistServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Saver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Track.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/TrackReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/FXML.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/FXMLView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hugoladobe.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListenOpolys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ListenOpolys.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/ListenOpolys.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/ListenOpolys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/controllers/FXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/controllers/FXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/PlaylistServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/PlaylistServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Saver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/Saver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Time.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/Time.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/Track.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/models/TrackReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/models/TrackReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/AddPlaylistView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/listenopolys/views/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/listenopolys/views/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/ListenOpolys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/ListenOpolys.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/controllers/FXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/hugoladobe.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/style/list-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/style/list-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLAjout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLAjout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLModif.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLModif.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Saver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Saver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/Track.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/TrackReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/models/TrackReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListenOpolys/listenopolys/views/FXMLView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savefile" beforeDir="false" afterPath="$PROJECT_DIR$/savefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listenopolys/ListenOpolys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/ListenOpolys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/controllers/Updater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/controllers/Updater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/models/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/Time.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/models/hugoladobe.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listenopolys/style/list-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/style/list-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listenopolys/views/FXMLModif.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/views/FXMLModif.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,11 +70,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/Updater.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="320">
+              <caret line="134" column="10" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9560#9561#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/ListenOpolys.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/SpektrumListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,38 +115,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Playlist.java">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/style/list-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1486#1487#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/SaverFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="21" column="111" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="111" />
             </state>
           </provider>
         </entry>
@@ -110,32 +136,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Track.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="222">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReaderListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -143,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="36" column="66" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="66" />
+            <state relative-caret-position="442">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,22 +158,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.java">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReaderListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java">
+        <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="30">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,8 +183,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -190,6 +192,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>repeat</find>
+      <find>update</find>
+      <find>viewTracksClicked</find>
+      <find>buttonRemoveTrackClicked</find>
+      <find>buttonAdd</find>
+      <find>buttonAddPl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,93 +218,102 @@
         <option value="$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.fxml" />
-        <option value="$PROJECT_DIR$/src/listenopolys/ListenOpolys.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml" />
         <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLModif.fxml" />
-        <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" />
-        <option value="$PROJECT_DIR$/src/listenopolys/style/list-style.css" />
-        <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/controllers/Updater.java" />
-        <option value="$PROJECT_DIR$/src/listenopolys/models/Playlist.java" />
         <option value="$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/ListenOpolys.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/models/Playlist.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/controllers/SpektrumListener.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLPlaylistController.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/models/SpektrumListener.java" />
+        <option value="$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml" />
+        <option value="$PROJECT_DIR$/src/listenopolys/style/list-style.css" />
+        <option value="$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="27" />
-    <option name="y" value="-30" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <autoscrollToSource Scope="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="listenopolys" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="listenopolys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="listenopolys" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="listenopolys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="listenopolys" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="listenopolys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="listenopolys" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="listenopolys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="style" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ListenOpolys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ListenOpolys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="listenopolys" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ListenOpolys" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ListenOpolys1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="listenopolys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547914405550" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../listenopolysgitlab" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548183679809" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.1/lib" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="listenopolys.models" />
+      <recent name="listenopolys.controllers" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -313,8 +329,10 @@
   </component>
   <component name="RunManager">
     <configuration name="ListenOpolys" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-11.0.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="listenopolys.ListenOpolys" />
-      <module name="ListenOpolys" />
+      <module name="ListenOpolys1" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.1\lib&quot; --add-modules=javafx.controls,javafx.fxml,javafx.media" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -335,9 +353,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18635875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -345,8 +364,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.21566401" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946293" weight="0.3280363" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21489362" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946293" visible="true" weight="0.3617021" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39954597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,7 +373,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053704" side_tool="true" weight="0.3291714" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3291714" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.33085108" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -364,6 +383,18 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/listenopolys/views/View.java" />
@@ -379,37 +410,9 @@
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Saver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/savefile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Time.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
+    <entry file="file://$PROJECT_DIR$/savefile" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -425,37 +428,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/ListenOpolys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="206" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLModif.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="109" selection-start-line="21" selection-start-column="109" selection-end-line="21" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="52" column="112" selection-start-line="52" selection-start-column="112" selection-end-line="52" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/classes/listenopolys/models/TrackReader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -465,47 +437,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/style/list-style.css">
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/Updater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5300">
-          <caret line="425" column="19" selection-start-line="425" selection-start-column="19" selection-end-line="425" selection-end-column="19" />
+        <state relative-caret-position="306">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java">
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/AddTrackView.java" />
+    <entry file="jar://C:/Program Files/Java/javafx-sdk-11.0.1/lib/javafx.fxml.jar!/javafx/fxml/FXMLLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="36" column="66" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.~lock.saveControl.rtf#" />
+    <entry file="file://$PROJECT_DIR$/saveControl.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/SpektrumListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLPlaylistController.java" />
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLAddPlaylistView.fxml" />
+    <entry file="file://$PROJECT_DIR$/ListenOpolys.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListenOpolys1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/javafx-sdk-11.0.1/lib/javafx.media.jar!/javafx/scene/media/Media.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/javafx-sdk-11.0.1/lib/javafx.media.jar!/com/sun/media/jfxmediaimpl/NativeMediaManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLModif.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerModif.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="472">
           <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -514,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/LoaderFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="459">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -524,49 +523,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Playlist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+        <state relative-caret-position="-537">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
+            <element signature="e#0#2453#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/PlaylistService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
+        <state relative-caret-position="398">
           <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Saver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/SaverFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="238">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Track.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -575,8 +560,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReaderListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/TrackReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLAjout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="111" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/javafx-sdk-11.0.1/lib/javafx.media.jar!/com/sun/media/jfxmedia/events/AudioSpectrumListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/models/SpektrumListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/ListenOpolys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/style/list-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLControllerAjout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/views/FXMLView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listenopolys/controllers/FXMLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="134" column="10" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9560#9561#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -609,6 +682,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>javafx-sdk-11.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -632,7 +706,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ListenOpolys</last-edited>
+          <last-edited>ListenOpolys1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
