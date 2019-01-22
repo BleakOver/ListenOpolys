@@ -25,10 +25,13 @@
     -fx-background-color: radial-gradient(focus-distance 0%, center 50% 25% , radius 55%, #252545 , #101020);
 }
 
-.axis-label {
-  -fx-text-fill: red;
+.default-color0.chart-series-area-line {
+    -fx-stroke: #9c0d38d3;
 }
 
+.default-color0.chart-series-area-fill {
+    -fx-fill: linear-gradient(to bottom, #9c0d38cf, #101020);
+}
 .chart-plot-background {
     -fx-background-color: transparent;
 }

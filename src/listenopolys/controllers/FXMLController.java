@@ -21,6 +21,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -122,7 +123,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 }
             }
         });
-        BANDS = 32;
+        BANDS = 128;
         XYChart.Series<String, Number> xyChart = new XYChart.Series<>();
         graphData = new XYChart.Data[BANDS + 2];
         for (int i = 0; i < graphData.length; i++) {
@@ -130,9 +131,10 @@ public class FXMLController implements Initializable, TrackReaderListener {
             xyChart.getData().add(graphData[i]);
         }
         graph.getData().add(xyChart);
+        ((NumberAxis)graph.getYAxis()).setUpperBound(70);
         graph.getYAxis().setAutoRanging(false);
-        //graph.getYAxis().setTickLabelsVisible(false);
-        //graph.getYAxis().setOpacity(0);
+        graph.getYAxis().setTickLabelsVisible(false);
+        graph.getYAxis().setOpacity(0);
         graph.getXAxis().setTickLabelsVisible(false);
         graph.getXAxis().setOpacity(0);
 
@@ -175,6 +177,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
             sliderMedia.setValue(0);
             reader.getPlayer().setAudioSpectrumListener(new SpektrumListener(reader, graphData, BANDS));
             reader.getPlayer().setAudioSpectrumNumBands(BANDS);
+            reader.getPlayer().setAudioSpectrumThreshold(-80);
         }
     }
 

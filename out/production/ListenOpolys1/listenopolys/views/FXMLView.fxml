@@ -49,6 +49,7 @@
             <ColumnConstraints />
             <ColumnConstraints />
             <ColumnConstraints />
+            <ColumnConstraints />
          </columnConstraints>
         </GridPane>
 
@@ -71,7 +72,7 @@
             </AnchorPane>
          </right>
          <center>
-            <AreaChart id="visualizer" fx:id="graph" alternativeRowFillVisible="false" animated="false" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" verticalGridLinesVisible="false" verticalZeroLineVisible="false" BorderPane.alignment="CENTER">
+            <AreaChart id="visualizer" fx:id="graph" alternativeRowFillVisible="false" animated="false" blendMode="LIGHTEN" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" verticalGridLinesVisible="false" verticalZeroLineVisible="false" BorderPane.alignment="CENTER">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
