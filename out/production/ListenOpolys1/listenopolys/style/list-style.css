@@ -50,6 +50,9 @@
     -fx-text-fill: linear-gradient(white, #d0d0d0);
     -fx-font-size: 12px;
     -fx-padding: 10 20 10 20;
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
 }
 
 .toggle-button:selected{
@@ -82,70 +85,44 @@
 
 #buttonPrevious{
     -fx-background-image: url("../img/prevButton.png");
-    -fx-background-size: 30px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: 50%;
 }
 
 #buttonNext{
     -fx-background-image: url("../img/next.png");
-        -fx-background-size: 30px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 50%;
 }
 
 #buttonStop{
     -fx-background-image: url("../img/stopButton.png");
-            -fx-background-size: 30px;
-            -fx-background-repeat: no-repeat;
-            -fx-background-position: 50%;
 }
 
 #buttonRepeat{
     -fx-background-image: url("../img/repeatButton.png");
-                -fx-background-size: 30px;
-                -fx-background-repeat: no-repeat;
-                -fx-background-position: 50%;
 }
 #buttonRandom{
     -fx-background-image: url("../img/randomButton.png");
-                -fx-background-size: 30px;
-                -fx-background-repeat: no-repeat;
-                -fx-background-position: 50%;
 
 }
 
 #buttonAddPlaylist{
      -fx-background-image: url("../img/addbutton.png");
-                    -fx-background-size: 30px;
-                    -fx-background-repeat: no-repeat;
-                    -fx-background-position: 50%;
 }
 
 #buttonRemovePlaylist{
      -fx-background-image: url("../img/removeButton.png");
-                    -fx-background-size: 30px;
-                    -fx-background-repeat: no-repeat;
-                    -fx-background-position: 50%;
 }
 
 #buttonAddTrack{
     -fx-background-image: url("../img/addbutton.png");
-                        -fx-background-size: 30px;
-                        -fx-background-repeat: no-repeat;
-                        -fx-background-position: 50%;
 }
 
 #buttonRemoveTrack{
     -fx-background-image: url("../img/removeButton.png");
-                        -fx-background-size: 30px;
-                        -fx-background-repeat: no-repeat;
-                        -fx-background-position: 50%;
 }
 
 #buttonModifyPlaylist{
     -fx-background-image: url("../img/modifyButton.png");
-                            -fx-background-size: 30px;
-                            -fx-background-repeat: no-repeat;
-                            -fx-background-position: 50%;
+}
+
+#buttonPlayPause{
+    -fx-background-image: url("../img/playButton.png");
 }

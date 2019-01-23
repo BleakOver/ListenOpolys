@@ -171,7 +171,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         if(viewTracks.getSelectionModel().getSelectedItem() != null && viewPlaylists.getSelectionModel().getSelectedItem() != null) {
             if(reader!=null) {
                 reader.stop();
-                buttonPlayPause.setText("Play");
+                buttonPlayPause.setStyle("-fx-background-image: url(\""+ getClass().getResource("../img/playButton.png").toExternalForm() +"\");");
             }
             runningPlaylist = viewPlaylists.getSelectionModel().getSelectedItem();
             runningTrackIndex = viewTracks.getSelectionModel().getSelectedIndex();
@@ -217,7 +217,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         if(reader == null) return;
         if(reader.getStatus().equals("PAUSED")||reader.getStatus().equals("READY")||reader.getStatus().equals("STOPPED")){
             reader.play();
-            buttonPlayPause.setText("Pause");
+            buttonPlayPause.setStyle("-fx-background-image: url(\""+ getClass().getResource("../img/pauseButton.png").toExternalForm() +"\");");
             timer.cancel();
             timer.purge();
             timer = new Timer();
@@ -225,7 +225,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
         else if(reader.getStatus().equals("PLAYING")){
             reader.pause();
-            buttonPlayPause.setText("Play");
+            buttonPlayPause.setStyle("-fx-background-image: url(\""+ getClass().getResource("../img/playButton.png").toExternalForm() +"\");");
             timer.cancel();
             timer.purge();
         }
@@ -239,7 +239,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
             reader.stop();
             sliderMedia.setValue(0);
             labelCurrentTime.setText("00:00");
-            buttonPlayPause.setText("Play");
+            buttonPlayPause.setStyle("-fx-background-image: url(\""+ getClass().getResource("../img/playButton.png").toExternalForm() +"\");");
             timer.cancel();
             timer.purge();
         }
@@ -252,7 +252,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
         if (!repeat) {
             timer.cancel();
             timer.purge();
-            buttonPlayPause.setText("Play");
+            buttonPlayPause.setStyle("-fx-background-image: url(\""+ getClass().getResource("../img/playButton.png").toExternalForm() +"\");");
             reader.stop();
             int nextIndex;
             if(random){

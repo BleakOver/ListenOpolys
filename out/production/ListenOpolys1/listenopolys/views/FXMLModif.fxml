@@ -19,7 +19,7 @@
                 </HBox>
                 <HBox alignment="CENTER">
                     <children>
-                        <Button fx:id="buttonModifyPlaylist" mnemonicParsing="false" onAction="#buttonModifyPlaylistClicked" text="Update" />
+                        <Button fx:id="buttonModifyPlaylist" mnemonicParsing="false" onAction="#buttonModifyPlaylistClicked" />
                     </children>
                 </HBox>
             </children>
