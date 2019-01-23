@@ -13,7 +13,7 @@
             <children>
                 <HBox alignment="CENTER" prefHeight="123.0" prefWidth="244.0">
                     <children>
-                        <Label prefHeight="21.0" prefWidth="55.0" text="Title :" />
+                        <Label prefHeight="21.0" prefWidth="55.0" text="Title :" textFill="WHITE" />
                         <TextField fx:id="textFieldTitle" prefHeight="31.0" prefWidth="142.0" />
                     </children>
                 </HBox>

@@ -71,6 +71,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
     private Label labelCurrentTime;
 
     @FXML
+    private Label labelTitle;
+
+    @FXML
     private AreaChart<String, Number> graph;
 
     private PlaylistService playlists;
@@ -123,7 +126,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 }
             }
         });
-        BANDS = 128;
+        BANDS = 64;
         XYChart.Series<String, Number> xyChart = new XYChart.Series<>();
         graphData = new XYChart.Data[BANDS + 2];
         for (int i = 0; i < graphData.length; i++) {
@@ -151,8 +154,14 @@ public class FXMLController implements Initializable, TrackReaderListener {
      * initialize the list-view of the tracks
      */
     public void viewPlaylistsClicked(){
-        if(viewPlaylists.getSelectionModel().getSelectedItem() != null)
+        if(viewPlaylists.getSelectionModel().getSelectedItem() != null){
             viewTracks.setItems((ObservableList<Track>) viewPlaylists.getSelectionModel().getSelectedItem().getTracks());
+            if(reader!=null && viewPlaylists.getSelectionModel().getSelectedItem().equals(runningPlaylist)){
+                viewTracks.getSelectionModel().select(runningTrackIndex);
+                viewTracks.getFocusModel().focus(runningTrackIndex);
+                viewTracks.scrollTo(runningTrackIndex);
+            }
+        }
     }
 
     /**
@@ -175,6 +184,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
             labelTotalTime.setText(new DecimalFormat("00").format((int)(dur.toMinutes()))+":"+new DecimalFormat("00").format((int)(dur.toSeconds())%60));
             labelCurrentTime.setText("00:00");
             sliderMedia.setValue(0);
+            labelTitle.setText(viewTracks.getSelectionModel().getSelectedItem().getTitle());
             reader.getPlayer().setAudioSpectrumListener(new SpektrumListener(reader, graphData, BANDS));
             reader.getPlayer().setAudioSpectrumNumBands(BANDS);
             reader.getPlayer().setAudioSpectrumThreshold(-80);

@@ -8,6 +8,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -50,6 +51,11 @@
             <ColumnConstraints />
             <ColumnConstraints />
             <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
          </columnConstraints>
         </GridPane>
 
@@ -72,15 +78,25 @@
             </AnchorPane>
          </right>
          <center>
-            <AreaChart id="visualizer" fx:id="graph" alternativeRowFillVisible="false" animated="false" blendMode="LIGHTEN" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" verticalGridLinesVisible="false" verticalZeroLineVisible="false" BorderPane.alignment="CENTER">
+            <AreaChart id="visualizer" fx:id="graph" alternativeRowFillVisible="false" animated="false" blendMode="LIGHTEN" createSymbols="false" focusTraversable="true" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" mouseTransparent="true" verticalGridLinesVisible="false" verticalZeroLineVisible="false" BorderPane.alignment="CENTER">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
               <yAxis>
                 <NumberAxis side="LEFT" />
               </yAxis>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
             </AreaChart>
          </center>
+         <top>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelTitle" textFill="WHITE" />
+               </children>
+            </HBox>
+         </top>
         </BorderPane>
 
         <GridPane fx:id="player" GridPane.columnIndex="1" GridPane.rowIndex="1">

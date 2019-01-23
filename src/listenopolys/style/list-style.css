@@ -35,3 +35,7 @@
 .chart-plot-background {
     -fx-background-color: transparent;
 }
+
+.label{
+    -fx-fill: red;
+}
