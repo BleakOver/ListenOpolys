@@ -23,16 +23,16 @@
                 <ListView fx:id="viewPlaylists" onMousePressed="#viewPlaylistsClicked" />
             <HBox alignment="TOP_CENTER" blendMode="ADD" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="buttonAddPlaylist" mnemonicParsing="false" onAction="#buttonAddPlaylistClicked" text="Add" />
-                  <Button fx:id="buttonModifyPlaylist" mnemonicParsing="false" onAction="#buttonModifyPlaylistClicked" text="Modify selected" />
-                  <Button fx:id="buttonRemovePlaylist" mnemonicParsing="false" onAction="#buttonRemovePlaylistClicked" text="Remove selected" />
+                  <Button fx:id="buttonAddPlaylist" mnemonicParsing="false" onAction="#buttonAddPlaylistClicked" prefHeight="25.0" prefWidth="45.0" />
+                  <Button fx:id="buttonModifyPlaylist" mnemonicParsing="false" onAction="#buttonModifyPlaylistClicked" prefHeight="25.0" prefWidth="80.0" />
+                  <Button fx:id="buttonRemovePlaylist" mnemonicParsing="false" onAction="#buttonRemovePlaylistClicked" prefHeight="25.0" prefWidth="45.0" />
                </children>
             </HBox>
                 <ListView fx:id="viewTracks" onMousePressed="#viewTracksClicked" GridPane.rowIndex="2" />
             <HBox alignment="TOP_CENTER" blendMode="ADD" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="buttonAddTrack" mnemonicParsing="false" onAction="#buttonAddTrackClicked" text="Add" />
-                  <Button fx:id="buttonRemoveTrack" mnemonicParsing="false" onAction="#buttonRemoveTrackClicked" text="Remove selected" />
+                  <Button fx:id="buttonAddTrack" mnemonicParsing="false" onAction="#buttonAddTrackClicked" />
+                  <Button fx:id="buttonRemoveTrack" mnemonicParsing="false" onAction="#buttonRemoveTrackClicked"  />
                </children>
             </HBox>
             </children>
@@ -103,12 +103,12 @@
             <children>
             <HBox alignment="CENTER" blendMode="ADD" spacing="25.0">
                <children>
-                  <Button fx:id="buttonPrevious" mnemonicParsing="false" onAction="#buttonPreviousClicked" text="Previous" />
-                      <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" text="Play" />
-                      <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#buttonNextClicked" text="Next" />
-                      <Button fx:id="buttonStop" onAction="#buttonStopClicked" text="Stop" />
-                      <ToggleButton fx:id="buttonRepeat" mnemonicParsing="false" onAction="#buttonRepeatClicked" text="Repeat" />
-                      <ToggleButton fx:id="buttonRandom" mnemonicParsing="false" onAction="#buttonRandomClicked" text="Random" />
+                  <Button fx:id="buttonPrevious" mnemonicParsing="false" onAction="#buttonPreviousClicked" prefHeight="25.0" prefWidth="50.0" styleClass="buttonMusic" />
+                      <Button fx:id="buttonPlayPause" onAction="#buttonPlayPauseClicked" prefHeight="25.0" prefWidth="83.0" styleClass="buttonMusic" text="Play" />
+                      <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#buttonNextClicked" prefHeight="25.0" prefWidth="50.0" styleClass="buttonMusic" />
+                      <Button fx:id="buttonStop" onAction="#buttonStopClicked" prefHeight="25.0" prefWidth="45.0" styleClass="buttonMusic" />
+                      <ToggleButton fx:id="buttonRepeat" mnemonicParsing="false" onAction="#buttonRepeatClicked" prefHeight="25.0" prefWidth="45.0" styleClass="buttonMusic" />
+                      <ToggleButton fx:id="buttonRandom" mnemonicParsing="false" onAction="#buttonRandomClicked" prefHeight="25.0" prefWidth="45.0" styleClass="buttonMusic" />
                </children>
             </HBox>
             </children>
