@@ -289,8 +289,9 @@ public class FXMLController implements Initializable, TrackReaderListener {
      */
     private void randomizeRandomList() {
         randomList = new ArrayList<>();
-        for (int i =0 ; i<viewTracks.getItems().size() ; i++) randomList.add(i);
-        randomList.remove(viewTracks.getSelectionModel().getSelectedIndex());
+        for (int i = 0 ; i<viewTracks.getItems().size() ; i++) randomList.add(i);
+        if(viewTracks.getSelectionModel().getSelectedIndex() != -1)
+            randomList.remove(viewTracks.getSelectionModel().getSelectedIndex());
         Collections.shuffle(randomList);
     }
 
@@ -299,7 +300,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
      */
     public void buttonRandomClicked(){
         random = !random;
-        if(random){
+        if(random && viewPlaylists.getSelectionModel().getSelectedItem()!=null){
             randomizeRandomList();
         }
     }
@@ -334,12 +335,14 @@ public class FXMLController implements Initializable, TrackReaderListener {
      * select and play the next song
      */
     public void buttonNextClicked() {
-        buttonStopClicked();
-        viewPlaylists.getSelectionModel().select(runningPlaylist);
-        viewPlaylistsClicked();
-        viewTracks.getSelectionModel().select((runningTrackIndex+1 == viewTracks.getItems().size()) ? 0 : runningTrackIndex+1);
-        viewTracksClicked();
-        reader.getPlayer().setOnReady(this::buttonPlayPauseClicked);
+        if(reader != null) {
+            buttonStopClicked();
+            viewPlaylists.getSelectionModel().select(runningPlaylist);
+            viewPlaylistsClicked();
+            viewTracks.getSelectionModel().select((runningTrackIndex + 1 == viewTracks.getItems().size()) ? 0 : runningTrackIndex + 1);
+            viewTracksClicked();
+            reader.getPlayer().setOnReady(this::buttonPlayPauseClicked);
+        }
     }
 
     /**
@@ -457,12 +460,6 @@ public class FXMLController implements Initializable, TrackReaderListener {
             }
         }
         viewPlaylistsClicked();
-    }
-
-    private float[] createFilledBuffer(int size, float fillValue) {
-        float[] floats = new float[size];
-        Arrays.fill(floats, fillValue);
-        return floats;
     }
 
     /**
