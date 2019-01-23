@@ -7,7 +7,7 @@ import javafx.scene.media.AudioSpectrumListener;
 import java.util.Arrays;
 
 public class SpektrumListener implements AudioSpectrumListener {
-    private final double DROPDOWN = 0.25;
+    private final double DROPDOWN = 4;
     private final int BANDS;
     TrackReader reader;
     private XYChart.Data[] series1Data;

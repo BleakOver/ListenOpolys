@@ -122,7 +122,7 @@ public class FXMLController implements Initializable, TrackReaderListener {
                 }
             }
         });
-        BANDS = 32;
+        BANDS = 100;
         XYChart.Series<String, Number> xyChart = new XYChart.Series<>();
         graphData = new XYChart.Data[BANDS + 2];
         for (int i = 0; i < graphData.length; i++) {
@@ -131,8 +131,8 @@ public class FXMLController implements Initializable, TrackReaderListener {
         }
         graph.getData().add(xyChart);
         graph.getYAxis().setAutoRanging(false);
-        //graph.getYAxis().setTickLabelsVisible(false);
-        //graph.getYAxis().setOpacity(0);
+        graph.getYAxis().setTickLabelsVisible(false);
+        graph.getYAxis().setOpacity(0);
         graph.getXAxis().setTickLabelsVisible(false);
         graph.getXAxis().setOpacity(0);
 
